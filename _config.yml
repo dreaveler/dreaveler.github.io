@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Your Name / Site Title"
+title                    : "dreaveler / 主页"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "dreaveler"
 description              : &description "personal description"
 url                      : https://dreaveler.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
