@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "dreaveler / 主页"
+title                    : "dreaveler's Homepage"
 title_separator          : "-"
 name                     : &name "dreaveler"
 description              : &description "A PKU AI freshman"
