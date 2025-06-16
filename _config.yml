@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "dreaveler / 主页"
 title_separator          : "-"
 name                     : &name "dreaveler"
-description              : &description "personal description"
+description              : &description "A PKU AI freshman"
 url                      : https://dreaveler.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dreaveler/dreaveler.github.io"
