@@ -22,7 +22,7 @@ repository               : "dreaveler/dreaveler.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "dreaveler.png"
+  avatar           : "./image/dreaveler.png"
   name             : "dreaveler"
   pronouns         : "He" 
   bio              : "A PKU AI freshman."
