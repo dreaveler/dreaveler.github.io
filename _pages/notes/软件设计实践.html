@@ -5,7 +5,7 @@ permalink: /notes/软件设计实践/
 author_profile: true
 ---
 
-{% assign subject_notes = site.notes | where_exp: "item", "item.path contains '软件设计实践/'" | sort: "title" %}
+{% assign subject_notes = site.notes | where: "subject", "软件设计实践" | sort: "title" %}
 <ul>
   {% for note in subject_notes %}
     <li><a href="{{ note.url }}">{{ note.title }}</a></li>
