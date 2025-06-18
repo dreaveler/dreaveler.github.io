@@ -293,8 +293,8 @@ defaults:
       type: notes
     values:
       layout: single
-      author_profile: true
       related: true
+      comments: true
 
 
 # Sass/SCSS
