@@ -43,6 +43,9 @@ layout: default
         {% endif %}    
         </header>
       {% endunless %}
+      <div id="toc" style="position:fixed; top:100px; right:30px; width:220px; max-height:70vh; overflow:auto; background:#fff; border:1px solid #eee; padding:16px; z-index:100;">
+        <b>目录</b>
+      </div>
 
       <section class="page__content" itemprop="text">
         {{ content }}
@@ -106,4 +109,19 @@ layout: default
       </div>
     </div>
   {% endif %}
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  var toc = document.getElementById("toc");
+  if (!toc) return;
+  var headers = document.querySelectorAll(".page__content h1, .page__content h2, .page__content h3");
+  var html = "<ul style='list-style:none;padding-left:0'>";
+  headers.forEach(function(h) {
+    if (!h.id) h.id = "toc_" + Math.random().toString(36).substr(2,8);
+    var indent = (h.tagName === "H2" ? "1em" : h.tagName === "H3" ? "2em" : "0");
+    html += "<li style='margin-left:"+indent+"'><a href='#"+h.id+"'>"+h.innerText+"</a></li>";
+  });
+  html += "</ul>";
+  toc.innerHTML += html;
+});
+</script>
 </div>
