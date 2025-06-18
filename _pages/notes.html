@@ -7,8 +7,12 @@ author_profile: true
 
 {% include base_path %}
 
+{%- assign subjects = site.notes | map: "subject" | uniq | sort -%}
 
-{% for post in site.notes %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<ul>
+  {% for subject in subjects %}
+    <li>
+      <a href="{{ '/notes/' | append: subject | relative_url }}">{{ subject }}</a>
+    </li>
+  {% endfor %}
+</ul>
