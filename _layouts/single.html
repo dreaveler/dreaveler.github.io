@@ -43,6 +43,13 @@ layout: default
         {% endif %}    
         </header>
       {% endunless %}
+      <style>
+      @media (max-width: 768px) {
+        #toc {
+          display: none !important;
+        }
+      }
+      </style>
       <div id="toc" style="position:fixed; top:100px; right:350px; width:220px; max-height:70vh; overflow:auto; background:#fff; border:1px solid #eee; padding:16px; z-index:100;">
         <b>目录</b>
       </div>
