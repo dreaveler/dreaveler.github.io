@@ -5,14 +5,8 @@ permalink: /notes/
 author_profile: true
 ---
 
-{% include base_path %}
-
-{%- assign subjects = site.notes | map: "subject" | uniq | sort -%}
-
+{% assign subjects = site.notes | map: "collection" | uniq | sort %}
 <ul>
-  {% for subject in subjects %}
-    <li>
-      <a href="{{ '/notes/' | append: subject | relative_url }}">{{ subject }}</a>
-    </li>
-  {% endfor %}
+  <li><a href="{{ '/notes/软设/' | relative_url }}">软设</a></li>
+  <!-- 以后有其他科目可继续添加 -->
 </ul>
