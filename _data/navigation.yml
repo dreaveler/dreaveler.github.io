@@ -10,6 +10,9 @@
 main:
   - title: "Notes"
     url: /notes/
+
+  - title: "Repositories"
+    url: /repositories/
 #  - title: "Publications"
 #    url: /publications/
 
