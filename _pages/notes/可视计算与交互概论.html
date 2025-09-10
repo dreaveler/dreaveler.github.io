@@ -1,0 +1,13 @@
+---
+layout: archive
+title: "可视计算与交互概论"
+permalink: /notes/可视计算与交互概论/
+author_profile: true
+---
+
+{% assign subject_notes = site.notes | where: "subject", "可视计算与交互概论" | sort: "title" %}
+<ul>
+  {% for note in subject_notes %}
+    <li><a href="{{ note.url }}">{{ note.title }}</a></li>
+  {% endfor %}
+</ul>
