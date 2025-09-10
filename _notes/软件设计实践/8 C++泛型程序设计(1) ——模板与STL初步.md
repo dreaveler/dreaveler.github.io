@@ -1,4 +1,5 @@
 ---
+number: 8
 title: "8 C++泛型程序设计(1) —— 模板与STL初步"
 subject: 软件设计实践
 date: 2025-6-26

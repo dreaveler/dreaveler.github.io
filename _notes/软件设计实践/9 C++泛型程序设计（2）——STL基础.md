@@ -1,4 +1,5 @@
 ---
+number: 9
 title: "9 C++泛型程序设计（2）—— STL基础"
 subject: 软件设计实践
 date: 2025-6-27
