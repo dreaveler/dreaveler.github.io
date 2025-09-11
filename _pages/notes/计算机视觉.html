@@ -5,7 +5,7 @@ permalink: /notes/计算机视觉/
 author_profile: true
 ---
 
-{% assign subject_notes = site.notes | where: "subject", "计算机视觉" | sort: "title" %}
+{% assign subject_notes = site.notes | where: "subject", "计算机视觉" | sort: "number" %}
 <ul>
   {% for note in subject_notes %}
     <li><a href="{{ note.url }}">{{ note.title }}</a></li>
