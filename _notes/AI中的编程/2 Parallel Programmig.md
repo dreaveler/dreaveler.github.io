@@ -51,18 +51,28 @@ GPU：
 
 # The First CUDA Program
 先来看看relu是怎么实现的
+
+
 ```C
 float relu_cpu(float x){
     return x > 0 ? x : 0;
 }
 ```
+
+
 对于一个数组的数来说
+
+
 ```C
 for (int i = 0 ; i < N ; ++i){
     h_out[i] = relu_cpu(h_in[i]);
 }
 ```
+
+
 CUDA中 定义一个kernel通过`__global__` launch kernel通过 <<<,>>>  
+
+
 ```CUDA
 __global__ void relu_gpu(float* in , float* out){
     int i = threadIdx.x；
@@ -70,6 +80,8 @@ __global__ void relu_gpu(float* in , float* out){
 }
 relu_gpu<<<1,N>>>(d_in,d_out);
 ```
+
+
 ## kernel launch
 在<<<1,N>>>中 1指的是一个block  N指的是thread的数量 一个block含有有限个thread(256/512/1024)  
 而多个block组合起来就是grid  
@@ -77,6 +89,8 @@ relu_gpu<<<1,N>>>(d_in,d_out);
 
 CUDA中有一个特殊的数据结构`dim3(x,y,z)`，而如果传入一个w 会自动生成这么一个数据类型  
 以下是一些常用操作  
+
+
 ```CUDA
 const int kCudaThreadsNum = 512
 inline int CudaGetBlocks( const int N ){
@@ -87,6 +101,8 @@ for (int i = blockIdx.x * blockDim x + threadIdx x ;     \
 i < (n);       \
 i += blockDim.x*gridDim.x)
 ```
+
+
 ```CUDA
 __global__ void relu_gpu (float * in, float * out, int n) {
     CUDA_KERNEL_LOOP(i , n){
@@ -95,6 +111,8 @@ __global__ void relu_gpu (float * in, float * out, int n) {
 }
 relu_gpu<<< CudaGetBlocks( N ), kCudaThreadsNum >>>(d_in , d_out , N)；
 ```
+
+
 # GPU Memory and HardWare
 内存的管理是容易出错的  
 那么我们可以创造出一个class Tensor来管理它  
