@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background-color: #000; overflow: hidden; }
+        .slideshow-container { width: 100vw; height: 100vh; position: relative; }
+        .slide { width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s ease-in-out; }
+        .slide.active { opacity: 1; }
+        .slide iframe { width: 100%; height: 100%; border: none; }
+        .slide-counter { position: fixed; top: 30px; right: 30px; z-index: 1000; background: rgba(0,0,0,0.8);
+            color: white; padding: 8px 16px; border-radius: 20px; font-size: 14px; backdrop-filter: blur(10px);}
+        .keyboard-hint { position: fixed; bottom: 30px; right: 30px; z-index: 1000; background: rgba(0,0,0,0.8);
+            color: white; padding: 8px 12px; border-radius: 15px; font-size: 12px; backdrop-filter: blur(10px); opacity: 0.7;}
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+
+        <div class="slide active" data-slide="0">
+            <iframe src="cover.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="1">
+            <iframe src="outline.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="2">
+            <iframe src="threat-virus.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="3">
+            <iframe src="threat-trojan.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="4">
+            <iframe src="threat-phishing.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="5">
+            <iframe src="threat-mitm.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="6">
+            <iframe src="security-architecture.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="7">
+            <iframe src="personal-protection.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="8">
+            <iframe src="public-network.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="9">
+            <iframe src="practice-firewall.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="10">
+            <iframe src="practice-wireshark.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="11">
+            <iframe src="security-drill.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="12">
+            <iframe src="advanced-threats.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="13">
+            <iframe src="cryptography-basics.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="14">
+            <iframe src="enterprise-security.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="15">
+            <iframe src="modern-security.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="16">
+            <iframe src="advanced-tools.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="17">
+            <iframe src="advanced-threats.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="18">
+            <iframe src="cryptography-basics.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="19">
+            <iframe src="enterprise-security.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="20">
+            <iframe src="modern-security.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="21">
+            <iframe src="advanced-tools.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="22">
+            <iframe src="outline-expanded.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="23">
+            <iframe src="resources.html" loading="lazy"></iframe>
+        </div>
+
+        <div class="slide" data-slide="24">
+            <iframe src="summary.html" loading="lazy"></iframe>
+        </div>
+
+
+    </div>
+
+      <div class="slide-counter">
+          <span id="current-slide">1</span> / <span id="total-slides">25</span>
+      </div>
+      <div class="keyboard-hint">
+          ← → / Space / Home / End
+      </div>
+  
+      <script>
+          let currentSlide = 0;
+          const slides = document.querySelectorAll('.slide');
+          const totalSlides = slides.length;
+  
+          function updateSlideDisplay() {
+              slides.forEach((slide, index) => {
+                  if (index === currentSlide) {
+                      slide.classList.add('active');
+                  } else {
+                      slide.classList.remove('active');
+                  }
+              });
+              document.getElementById('current-slide').textContent = currentSlide + 1;
+          }
+  
+          function goToSlide(i) {
+              if (i >= 0 && i < totalSlides) {
+                  currentSlide = i;
+                  updateSlideDisplay();
+              }
+          }
+  
+          function nextSlide() {
+              if (currentSlide < totalSlides - 1) {
+                  currentSlide++;
+                  updateSlideDisplay();
+              }
+          }
+  
+          function prevSlide() {
+              if (currentSlide > 0) {
+                  currentSlide--;
+                  updateSlideDisplay();
+              }
+          }
+  
+          window.addEventListener('keydown', e => {
+              if (e.key === 'ArrowRight' || e.key === ' ') {
+                  e.preventDefault();
+                  nextSlide();
+              } else if (e.key === 'ArrowLeft') {
+                  e.preventDefault();
+                  prevSlide();
+              } else if (e.key === 'Home') {
+                  e.preventDefault();
+                  goToSlide(0);
+              } else if (e.key === 'End') {
+                  e.preventDefault();
+                  goToSlide(totalSlides - 1);
+              }
+          });
+  
+          window.addEventListener('mouseover', () => {
+              window.focus();
+          });
+          window.addEventListener('message', e => {
+              if (e.data === 'go-next') {
+                  nextSlide();
+              } else if (e.data === 'go-prev') {
+                  prevSlide();
+              }
+          });
+          if (totalSlides > 0) {
+              document.getElementById('total-slides').textContent = totalSlides;
+              updateSlideDisplay();
+          }
+      </script>
+</body>
+</html>

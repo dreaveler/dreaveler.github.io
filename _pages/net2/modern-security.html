@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>现代安全话题：移动、云与IoT安全</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .security-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .security-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .mobile-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .cloud-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.1) 100%);
+            border-left: 4px solid #22c55e;
+        }
+        
+        .iot-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-left: 4px solid #8b5cf6;
+        }
+        
+        .threat-item {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
+            border-left: 4px solid #ef4444;
+        }
+        
+        .defense-item {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%);
+            border-left: 4px solid #22c55e;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-mobile-alt text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white">现代安全话题</h1>
+            </div>
+            <p class="text-xl text-slate-300">移动、云与IoT时代的安全挑战</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="security-card mobile-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">移动安全</h3>
+                        <p class="text-slate-300">Mobile Security</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="threat-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">主要威胁</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 恶意应用程序</li>
+                            <li>• 网络中间人攻击</li>
+                            <li>• 设备丢失或被盗</li>
+                            <li>• 操作系统漏洞</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="defense-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">防护措施</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 应用商店安全审查</li>
+                            <li>• 移动设备管理(MDM)</li>
+                            <li>• 应用权限控制</li>
+                            <li>• 远程擦除功能</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="security-card cloud-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-cloud text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">云安全</h3>
+                        <p class="text-slate-300">Cloud Security</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="threat-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">主要威胁</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 配置错误和漏洞</li>
+                            <li>• 身份认证和授权问题</li>
+                            <li>• 数据泄露和隐私问题</li>
+                            <li>• 供应商锁定风险</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="defense-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">防护措施</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 零信任安全模型</li>
+                            <li>• 多云安全策略</li>
+                            <li>• 数据加密和备份</li>
+                            <li>• 持续安全监控</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="security-card iot-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-microchip text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">IoT安全</h3>
+                        <p class="text-slate-300">IoT Security</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="threat-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">主要威胁</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 设备固件漏洞</li>
+                            <li>• 默认密码和弱认证</li>
+                            <li>• 不安全的通信协议</li>
+                            <li>• 物理安全威胁</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="defense-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">防护措施</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 设备身份认证</li>
+                            <li>• 安全固件更新机制</li>
+                            <li>• 网络隔离和分段</li>
+                            <li>• 设备生命周期管理</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-6 border border-blue-500/20">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-lightbulb text-yellow-400 text-2xl"></i>
+                <div>
+                    <h4 class="text-white font-bold text-lg">安全趋势展望</h4>
+                    <p class="text-slate-300">AI驱动的威胁检测、量子加密、隐私计算等新技术正在重塑网络安全格局</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

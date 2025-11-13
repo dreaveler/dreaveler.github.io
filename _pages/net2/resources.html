@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>培训资源与后续学习指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .resource-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .book-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .course-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.1) 100%);
+            border-left: 4px solid #22c55e;
+        }
+        
+        .cert-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-left: 4px solid #8b5cf6;
+        }
+        
+        .community-card {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(217, 119, 6, 0.1) 100%);
+            border-left: 4px solid #f97316;
+        }
+        
+        .floating-icon {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-8">
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="floating-icon absolute top-20 left-20 w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+            <i class="fas fa-book text-white text-2xl"></i>
+        </div>
+        <div class="floating-icon absolute top-40 right-32 w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center" style="animation-delay: -1s;">
+            <i class="fas fa-graduation-cap text-white text-lg"></i>
+        </div>
+        <div class="floating-icon absolute bottom-32 left-32 w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center" style="animation-delay: -2s;">
+            <i class="fas fa-certificate text-white text-xl"></i>
+        </div>
+        <div class="floating-icon absolute bottom-20 right-20 w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center" style="animation-delay: -0.5s;">
+            <i class="fas fa-users text-white"></i>
+        </div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-black text-white mb-4">培训资源与后续学习</h1>
+            <p class="text-xl text-slate-300">持续学习，不断提升安全技能</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8 mb-8">
+            <div class="resource-card book-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-book text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">推荐书籍</h3>
+                        <p class="text-slate-300">经典安全著作</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-blue-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">《网络安全基础》</h4>
+                        <p class="text-slate-300 text-sm">William Stallings 著 - 网络安全理论基础知识</p>
+                    </div>
+                    
+                    <div class="bg-blue-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">《黑客攻防技术宝典》</h4>
+                        <p class="text-slate-300 text-sm">Jon Erickson 著 - 深入理解黑客技术原理</p>
+                    </div>
+                    
+                    <div class="bg-blue-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">《Web应用安全权威指南》</h4>
+                        <p class="text-slate-300 text-sm">Dafydd Stuttard 著 - Web安全测试实战指南</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="resource-card course-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">在线课程</h3>
+                        <p class="text-slate-300">优质学习平台</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-green-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Coursera网络安全专项课程</h4>
+                        <p class="text-slate-300 text-sm">纽约大学等名校开设的网络安全系列课程</p>
+                    </div>
+                    
+                    <div class="bg-green-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Cybrary.it</h4>
+                        <p class="text-slate-300 text-sm">免费网络安全培训平台，涵盖各类安全主题</p>
+                    </div>
+                    
+                    <div class="bg-green-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">SANS网络安全培训</h4>
+                        <p class="text-slate-300 text-sm">业界知名的专业安全培训机构</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8">
+            <div class="resource-card cert-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-certificate text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">专业认证</h3>
+                        <p class="text-slate-300">行业认可证书</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-purple-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">CISSP</h4>
+                        <p class="text-slate-300 text-sm">信息系统安全认证专家 - 高级安全管理认证</p>
+                    </div>
+                    
+                    <div class="bg-purple-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">CEH</h4>
+                        <p class="text-slate-300 text-sm">道德黑客认证 - 渗透测试基础认证</p>
+                    </div>
+                    
+                    <div class="bg-purple-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Security+</h4>
+                        <p class="text-slate-300 text-sm">CompTIA安全基础认证 - 入门级安全认证</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="resource-card community-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-users text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">技术社区</h3>
+                        <p class="text-slate-300">交流学习平台</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-orange-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">FreeBuf</h4>
+                        <p class="text-slate-300 text-sm">国内知名的网络安全技术社区</p>
+                    </div>
+                    
+                    <div class="bg-orange-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Seebug</h4>
+                        <p class="text-slate-300 text-sm">漏洞分析和技术分享平台</p>
+                    </div>
+                    
+                    <div class="bg-orange-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">GitHub安全项目</h4>
+                        <p class="text-slate-300 text-sm">开源安全工具和学习资源</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

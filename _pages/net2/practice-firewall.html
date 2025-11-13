@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows防火墙配置</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .step-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .step-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .demo-step {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .task-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%);
+            border-left: 4px solid #22c55e;
+        }
+        
+        .code-snippet {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-fire text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white">Windows防火墙配置</h1>
+            </div>
+            <p class="text-xl text-slate-300">掌握应用级规则配置与端口控制</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                    <i class="fas fa-cogs text-blue-400 mr-3"></i>
+                    操作演示
+                </h3>
+                
+                <div class="space-y-4">
+                    <div class="step-card demo-step rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
+                            <h4 class="text-white font-semibold">打开高级安全Windows防火墙</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">控制面板 → Windows Defender 防火墙 → 高级设置</p>
+                    </div>
+                    
+                    <div class="step-card demo-step rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">2</div>
+                            <h4 class="text-white font-semibold">新建入站规则</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">右键"入站规则" → 新建规则 → 选择"程序"</p>
+                    </div>
+                    
+                    <div class="step-card demo-step rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">3</div>
+                            <h4 class="text-white font-semibold">指定程序路径</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">浏览并选择要阻止的程序可执行文件</p>
+                    </div>
+                    
+                    <div class="step-card demo-step rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">4</div>
+                            <h4 class="text-white font-semibold">选择操作</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">选择"阻止连接"，应用规则</p>
+                    </div>
+                    
+                    <div class="step-card demo-step rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">5</div>
+                            <h4 class="text-white font-semibold">查看规则摘要</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">监视 → 规则摘要，确认规则生效</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                    <i class="fas fa-tasks text-green-400 mr-3"></i>
+                    实验任务
+                </h3>
+                
+                <div class="space-y-4">
+                    <div class="step-card task-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <i class="fas fa-ban text-green-400 text-xl"></i>
+                            <h4 class="text-white font-semibold">任务一：阻止程序联网</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm mb-3">选择一个非系统关键程序，配置防火墙规则阻止其网络访问</p>
+                        <div class="code-snippet rounded p-2">
+                            <code class="text-blue-400 text-xs">测试方法：程序无法访问网络，但仍可正常运行</code>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card task-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <i class="fas fa-globe text-green-400 text-xl"></i>
+                            <h4 class="text-white font-semibold">任务二：仅允许HTTPS访问</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm mb-3">配置浏览器只允许访问443端口（HTTPS），阻止80端口（HTTP）</p>
+                        <div class="code-snippet rounded p-2">
+                            <code class="text-blue-400 text-xs">验证方法：HTTP网站无法访问，HTTPS网站正常</code>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-lg p-4 border border-green-500/20">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-lightbulb text-yellow-400 text-xl"></i>
+                        <div>
+                            <h5 class="text-white font-semibold">关键概念</h5>
+                            <p class="text-slate-300 text-sm">入站规则控制外部访问本机，出站规则控制本机访问外部网络</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

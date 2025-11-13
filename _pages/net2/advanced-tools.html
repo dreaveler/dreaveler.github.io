@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高级安全工具与实验</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .tool-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .network-tool {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .system-tool {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.1) 100%);
+            border-left: 4px solid #22c55e;
+        }
+        
+        .forensics-tool {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-left: 4px solid #8b5cf6;
+        }
+        
+        .lab-scenario {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(217, 119, 6, 0.1) 100%);
+            border-left: 4px solid #f97316;
+        }
+        
+        .command-demo {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-tools text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white">高级安全工具与实验</h1>
+            </div>
+            <p class="text-xl text-slate-300">掌握专业安全工具的使用技巧</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8 mb-8">
+            <div class="tool-card network-tool rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-network-wired text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">网络分析工具</h3>
+                        <p class="text-slate-300">Network Analysis</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="command-demo rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Nmap 网络扫描</h4>
+                        <code class="text-blue-400 text-xs">nmap -sS -O target.com</code>
+                        <p class="text-slate-300 text-xs mt-1">SYN扫描 + 操作系统检测</p>
+                    </div>
+                    
+                    <div class="command-demo rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Netcat 网络工具</h4>
+                        <code class="text-blue-400 text-xs">nc -zv target.com 1-1000</code>
+                        <p class="text-slate-300 text-xs mt-1">端口扫描测试</p>
+                    </div>
+                    
+                    <div class="command-demo rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Burp Suite</h4>
+                        <code class="text-blue-400 text-xs">Web应用安全测试平台</code>
+                        <p class="text-slate-300 text-xs mt-1">拦截、修改和分析HTTP流量</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tool-card system-tool rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-desktop text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">系统安全工具</h3>
+                        <p class="text-slate-300">System Security</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="command-demo rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Sysinternals Suite</h4>
+                        <code class="text-green-400 text-xs">Process Explorer, Autoruns</code>
+                        <p class="text-slate-300 text-xs mt-1">Windows系统深度分析</p>
+                    </div>
+                    
+                    <div class="command-demo rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">OSSEC HIDS</h4>
+                        <code class="text-green-400 text-xs">主机入侵检测系统</code>
+                        <p class="text-slate-300 text-xs mt-1">实时日志分析和文件完整性检查</p>
+                    </div>
+                    
+                    <div class="command-demo rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">OpenVAS</h4>
+                        <code class="text-green-400 text-xs">开源漏洞扫描器</code>
+                        <p class="text-slate-300 text-xs mt-1">全面漏洞评估和管理</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tool-card forensics-tool rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-search text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">数字取证工具</h3>
+                        <p class="text-slate-300">Digital Forensics</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="command-demo rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Volatility</h4>
+                        <code class="text-purple-400 text-xs">内存取证分析框架</code>
+                        <p class="text-slate-300 text-xs mt-1">分析内存转储中的恶意软件</p>
+                    </div>
+                    
+                    <div class="command-demo rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Autopsy</h4>
+                        <code class="text-purple-400 text-xs">数字取证平台</code>
+                        <p class="text-slate-300 text-xs mt-1">硬盘分析和文件恢复</p>
+                    </div>
+                    
+                    <div class="command-demo rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Sleuth Kit</h4>
+                        <code class="text-purple-400 text-xs">文件系统分析工具</code>
+                        <p class="text-slate-300 text-xs mt-1">深度文件系统取证分析</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-card lab-scenario rounded-2xl p-8">
+            <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                <i class="fas fa-flask text-orange-400 mr-3"></i>
+                高级实验场景
+            </h3>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">恶意软件分析实验</h4>
+                    <div class="space-y-3">
+                        <div class="command-demo rounded-lg p-3">
+                            <h5 class="text-white font-semibold mb-2">静态分析</h5>
+                            <code class="text-orange-400 text-xs">strings malware.exe | grep -i "http"</code>
+                            <p class="text-slate-300 text-xs mt-1">提取可打印字符串，查找URL</p>
+                        </div>
+                        <div class="command-demo rounded-lg p-3">
+                            <h5 class="text-white font-semibold mb-2">动态分析</h5>
+                            <code class="text-orange-400 text-xs">使用沙箱环境运行样本</code>
+                            <p class="text-slate-300 text-xs mt-1">监控文件系统、网络和进程行为</p>
+                        </div>
+                        <div class="command-demo rounded-lg p-3">
+                            <h5 class="text-white font-semibold mb-2">网络分析</h5>
+                            <code class="text-orange-400 text-xs">Wireshark + 恶意软件样本</code>
+                            <p class="text-slate-300 text-xs mt-1">捕获和分析恶意网络流量</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">渗透测试实验</h4>
+                    <div class="space-y-3">
+                        <div class="command-demo rounded-lg p-3">
+                            <h5 class="text-white font-semibold mb-2">信息收集</h5>
+                            <code class="text-orange-400 text-xs">theHarvester -d target.com -b all</code>
+                            <p class="text-slate-300 text-xs mt-1">收集目标邮箱和子域名信息</p>
+                        </div>
+                        <div class="command-demo rounded-lg p-3">
+                            <h5 class="text-white font-semibold mb-2">漏洞扫描</h5>
+                            <code class="text-orange-400 text-xs">Nessus/OpenVAS 全面扫描</code>
+                            <p class="text-slate-300 text-xs mt-1">识别系统和应用漏洞</p>
+                        </div>
+                        <div class="command-demo rounded-lg p-3">
+                            <h5 class="text-white font-semibold mb-2">漏洞利用</h5>
+                            <code class="text-orange-400 text-xs">Metasploit Framework</code>
+                            <p class="text-slate-300 text-xs mt-1">验证和利用发现的安全漏洞</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

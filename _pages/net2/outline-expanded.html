@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扩充培训大纲</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .section-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .section-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .time-badge {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        
+        .advanced-badge {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-black text-white mb-4">扩充培训大纲</h1>
+            <p class="text-xl text-slate-300">全面深入的网络安全学习体系</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8 mb-8">
+            <div class="section-card rounded-2xl p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-rocket text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">高级威胁篇</h3>
+                            <p class="text-slate-300">新增内容</p>
+                        </div>
+                    </div>
+                    <div class="advanced-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                        新增
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-lock text-red-400 w-5"></i>
+                        <span class="text-slate-200">勒索软件攻击与防御</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-wave-square text-orange-400 w-5"></i>
+                        <span class="text-slate-200">DDoS攻击原理与缓解</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-bomb text-purple-400 w-5"></i>
+                        <span class="text-slate-200">零日漏洞利用与防护</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-user-ninja text-green-400 w-5"></i>
+                        <span class="text-slate-200">APT攻击检测与响应</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-card rounded-2xl p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-key text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">技术深度篇</h3>
+                            <p class="text-slate-300">新增内容</p>
+                        </div>
+                    </div>
+                    <div class="advanced-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                        新增
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-calculator text-blue-400 w-5"></i>
+                        <span class="text-slate-200">密码学基础与加密算法</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-building text-green-400 w-5"></i>
+                        <span class="text-slate-200">企业级安全架构设计</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-headset text-purple-400 w-5"></i>
+                        <span class="text-slate-200">SOC安全运营中心</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-mobile-alt text-orange-400 w-5"></i>
+                        <span class="text-slate-200">移动、云与IoT安全</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-card rounded-2xl p-8">
+            <h3 class="text-2xl font-bold text-white mb-6 flex items-center justify-center">
+                <i class="fas fa-flask text-green-400 mr-3"></i>
+                高级实操训练
+            </h3>
+            
+            <div class="grid grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white mb-3">
+                        <i class="fas fa-search text-2xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">恶意软件分析</h4>
+                    <p class="text-slate-300 text-sm">使用专业工具分析恶意软件样本</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white mb-3">
+                        <i class="fas fa-bug text-2xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">渗透测试</h4>
+                    <p class="text-slate-300 text-sm">模拟真实攻击场景的安全测试</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white mb-3">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">数字取证</h4>
+                    <p class="text-slate-300 text-sm">掌握数字证据收集和分析技术</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white mb-3">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">高级工具使用</h4>
+                    <p class="text-slate-300 text-sm">掌握专业安全工具的操作技巧</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8">
+            <div class="inline-flex items-center space-x-2 bg-slate-800/60 backdrop-blur-sm rounded-lg px-6 py-3 border border-slate-600">
+                <i class="fas fa-clock text-blue-400"></i>
+                <span class="text-slate-200 font-medium">扩充后总时长：240分钟</span>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

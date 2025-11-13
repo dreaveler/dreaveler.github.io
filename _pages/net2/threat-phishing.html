@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钓鱼攻击（Phishing）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .psychology-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .psychology-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .form-card {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(217, 119, 6, 0.05) 100%);
+            border-left: 4px solid #f97316;
+        }
+        
+        .defense-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%);
+            border-left: 4px solid #22c55e;
+        }
+        
+        .detection-method {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-fish text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white">钓鱼攻击（Phishing）</h1>
+            </div>
+            <p class="text-xl text-slate-300">利用人性弱点实施精准欺骗的社会工程学攻击</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8 mb-8">
+            <div class="psychology-card rounded-2xl p-6">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-brain text-purple-400 mr-3"></i>
+                    攻击心理学原理
+                </h3>
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-exclamation text-white text-sm"></i>
+                        </div>
+                        <span class="text-slate-200">恐惧心理</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-clock text-white text-sm"></i>
+                        </div>
+                        <span class="text-slate-200">紧迫感觉</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-handshake text-white text-sm"></i>
+                        </div>
+                        <span class="text-slate-200">信任利用</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="psychology-card rounded-2xl p-6">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-envelope text-green-400 mr-3"></i>
+                    常见形式
+                </h3>
+                <div class="space-y-4">
+                    <div class="form-card rounded-lg p-3">
+                        <h4 class="text-white font-semibold text-sm">邮件伪造</h4>
+                        <p class="text-slate-300 text-xs">冒充银行、快递通知等</p>
+                    </div>
+                    <div class="form-card rounded-lg p-3">
+                        <h4 class="text-white font-semibold text-sm">社交网络钓鱼</h4>
+                        <p class="text-slate-300 text-xs">假账号发送私信</p>
+                    </div>
+                    <div class="form-card rounded-lg p-3">
+                        <h4 class="text-white font-semibold text-sm">伪造登录页</h4>
+                        <p class="text-slate-300 text-xs">冒充微信/支付宝页面</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="psychology-card rounded-2xl p-6">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-shield-alt text-blue-400 mr-3"></i>
+                    防御实践
+                </h3>
+                <div class="space-y-4">
+                    <div class="defense-card rounded-lg p-3">
+                        <h4 class="text-white font-semibold text-sm">安全意识</h4>
+                        <p class="text-slate-300 text-xs">不直接点击邮件链接</p>
+                    </div>
+                    <div class="defense-card rounded-lg p-3">
+                        <h4 class="text-white font-semibold text-sm">技术防护</h4>
+                        <p class="text-slate-300 text-xs">使用安全插件如Netcraft</p>
+                    </div>
+                    <div class="defense-card rounded-lg p-3">
+                        <h4 class="text-white font-semibold text-sm">身份验证</h4>
+                        <p class="text-slate-300 text-xs">开启双重身份验证（2FA）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-search text-cyan-400 mr-3"></i>
+                    检测方法
+                </h3>
+                <div class="space-y-4">
+                    <div class="detection-method rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-globe text-blue-400"></i>
+                            <h4 class="text-white font-semibold">域名检查</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">检查是否有细微字符差异（如"paypa1.com"代替"paypal.com"）</p>
+                    </div>
+                    <div class="detection-method rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-envelope-open text-blue-400"></i>
+                            <h4 class="text-white font-semibold">邮件头分析</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">查看真实发件服务器和邮件路由信息</p>
+                    </div>
+                    <div class="detection-method rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-lock text-blue-400"></i>
+                            <h4 class="text-white font-semibold">证书验证</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">HTTPS不等于安全，攻击者也能使用免费证书</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-lightbulb text-yellow-400 mr-3"></i>
+                    实战提示
+                </h3>
+                <div class="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-2xl p-6 border border-yellow-500/20">
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold">手动输入网址</h4>
+                                <p class="text-slate-300 text-sm">重要网站手动输入地址，避免点击邮件链接</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold">多渠道验证</h4>
+                                <p class="text-slate-300 text-sm">通过其他渠道确认邮件内容的真实性</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold">定期培训</h4>
+                                <p class="text-slate-300 text-sm">定期参加安全意识培训，了解最新攻击手法</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

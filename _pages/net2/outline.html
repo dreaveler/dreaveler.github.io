@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>培训大纲</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .section-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .section-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .time-badge {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-black text-white mb-4">培训大纲</h1>
+            <p class="text-xl text-slate-300">系统化的网络安全学习路径</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="section-card rounded-2xl p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-book text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">第一部分</h3>
+                            <p class="text-slate-300">理论基础</p>
+                        </div>
+                    </div>
+                    <div class="time-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                        60分钟
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-virus text-red-400 w-5"></i>
+                        <span class="text-slate-200">常见网络威胁类型与攻击原理</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-shield-alt text-blue-400 w-5"></i>
+                        <span class="text-slate-200">网络安全架构与防御体系</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-user-shield text-green-400 w-5"></i>
+                        <span class="text-slate-200">个人数据与隐私防护策略</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-wifi text-purple-400 w-5"></i>
+                        <span class="text-slate-200">公共网络安全策略</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-card rounded-2xl p-8">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-tools text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">第二部分</h3>
+                            <p class="text-slate-300">实操训练</p>
+                        </div>
+                    </div>
+                    <div class="time-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                        90分钟
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-cog text-blue-400 w-5"></i>
+                        <span class="text-slate-200">防护工具配置与安全审计</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-exclamation-triangle text-orange-400 w-5"></i>
+                        <span class="text-slate-200">安全事件应对演练</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-search text-cyan-400 w-5"></i>
+                        <span class="text-slate-200">网络流量监测分析</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-certificate text-yellow-400 w-5"></i>
+                        <span class="text-slate-200">HTTPS证书验证安装</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <div class="inline-flex items-center space-x-2 bg-slate-800/60 backdrop-blur-sm rounded-lg px-6 py-3 border border-slate-600">
+                <i class="fas fa-clock text-blue-400"></i>
+                <span class="text-slate-200 font-medium">总时长：150分钟</span>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>病毒（Virus）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .mechanism-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .mechanism-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .evolution-item {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
+            border-left: 4px solid #ef4444;
+        }
+        
+        .defense-item {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%);
+            border-left: 4px solid #22c55e;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-virus text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white">病毒（Virus）</h1>
+            </div>
+            <p class="text-xl text-slate-300">依赖宿主的寄生型恶意程序</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="mechanism-card rounded-2xl p-6">
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-cogs text-blue-400 mr-3"></i>
+                    运行机制
+                </h3>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">1</div>
+                        <div>
+                            <h4 class="text-white font-semibold">宿主程序传播</h4>
+                            <p class="text-slate-300 text-sm">通过附着在正常程序中传播</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">2</div>
+                        <div>
+                            <h4 class="text-white font-semibold">激活注入</h4>
+                            <p class="text-slate-300 text-sm">系统启动或文件执行时注入恶意代码</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">3</div>
+                        <div>
+                            <h4 class="text-white font-semibold">多渠道传播</h4>
+                            <p class="text-slate-300 text-sm">网络共享、U盘、邮件附件等</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mechanism-card rounded-2xl p-6">
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-dna text-purple-400 mr-3"></i>
+                    进化形态
+                </h3>
+                <div class="space-y-4">
+                    <div class="evolution-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">多态病毒</h4>
+                        <p class="text-slate-300 text-sm">每次感染时加密或修改代码，躲避检测</p>
+                    </div>
+                    <div class="evolution-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">宏病毒</h4>
+                        <p class="text-slate-300 text-sm">通过Office宏自动执行，感染文档文件</p>
+                    </div>
+                    <div class="evolution-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">Rootkit</h4>
+                        <p class="text-slate-300 text-sm">隐藏在系统内核层，难以检测和清除</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mechanism-card rounded-2xl p-6">
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-shield-alt text-green-400 mr-3"></i>
+                    检测与防御
+                </h3>
+                <div class="space-y-4">
+                    <div class="defense-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">特征码检测</h4>
+                        <p class="text-slate-300 text-sm">基于病毒库比对的静态检测方法</p>
+                    </div>
+                    <div class="defense-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">行为检测</h4>
+                        <p class="text-slate-300 text-sm">基于程序行为的动态检测技术</p>
+                    </div>
+                    <div class="defense-item rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">防御建议</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 禁止自动运行外部设备</li>
+                            <li>• 定期执行全盘扫描</li>
+                            <li>• 设置文件系统完整性监控</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-6 border border-red-500/20">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-exclamation-triangle text-red-400 text-2xl"></i>
+                <div>
+                    <h4 class="text-white font-bold text-lg">经典案例：CIH病毒（1998年）</h4>
+                    <p class="text-slate-300">全球600万台计算机受损，首款直接破坏硬件的病毒，覆盖主板BIOS数据导致系统无法启动</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

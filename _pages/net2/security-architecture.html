@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络安全架构与防御体系</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .architecture-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .architecture-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .firewall-level {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .ids-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-left: 4px solid #8b5cf6;
+        }
+        
+        .encryption-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.1) 100%);
+            border-left: 4px solid #22c55e;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white">网络安全架构与防御体系</h1>
+            </div>
+            <p class="text-xl text-slate-300">构建多层次、全方位的安全防护体系</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="architecture-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-fire text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">防火墙</h3>
+                        <p class="text-slate-300">Firewall</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="firewall-level rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">包过滤防火墙</h4>
+                        <p class="text-slate-300 text-sm">基于IP地址、端口号进行数据包过滤</p>
+                    </div>
+                    <div class="firewall-level rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">状态检测防火墙</h4>
+                        <p class="text-slate-300 text-sm">跟踪连接状态，实现更精确的访问控制</p>
+                    </div>
+                    <div class="firewall-level rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">应用层防火墙</h4>
+                        <p class="text-slate-300 text-sm">深度分析HTTP、FTP等应用层协议</p>
+                    </div>
+                </div>
+                
+                <div class="mt-6 bg-blue-500/10 rounded-lg p-4">
+                    <h5 class="text-white font-semibold mb-2">企业配置建议</h5>
+                    <ul class="text-slate-300 text-sm space-y-1">
+                        <li>• 只开放业务必要端口</li>
+                        <li>• 定期审计规则</li>
+                        <li>• 采用分层防护结构</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="architecture-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-eye text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">IDS/IPS</h3>
+                        <p class="text-slate-300">入侵检测与防御</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="ids-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-search text-purple-400"></i>
+                            <h4 class="text-white font-semibold">签名识别</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">匹配已知攻击特征库</p>
+                    </div>
+                    <div class="ids-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-chart-line text-purple-400"></i>
+                            <h4 class="text-white font-semibold">异常检测</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">基于流量和行为统计分析</p>
+                    </div>
+                </div>
+                
+                <div class="mt-6 space-y-3">
+                    <div class="bg-purple-500/10 rounded-lg p-3">
+                        <h5 class="text-white font-semibold text-sm mb-1">IDS特点</h5>
+                        <p class="text-slate-300 text-xs">旁路部署，检测报警，事后处理</p>
+                    </div>
+                    <div class="bg-purple-500/10 rounded-lg p-3">
+                        <h5 class="text-white font-semibold text-sm mb-1">IPS特点</h5>
+                        <p class="text-slate-300 text-xs">串联部署，实时阻断，主动防御</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="architecture-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-lock text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">加密通信</h3>
+                        <p class="text-slate-300">Encryption</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="encryption-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-handshake text-green-400"></i>
+                            <h4 class="text-white font-semibold">TLS握手</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">客户端与服务器协商加密参数</p>
+                    </div>
+                    <div class="encryption-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-certificate text-green-400"></i>
+                            <h4 class="text-white font-semibold">证书验证</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">验证服务器身份和证书有效性</p>
+                    </div>
+                    <div class="encryption-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-key text-green-400"></i>
+                            <h4 class="text-white font-semibold">密钥协商</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">生成对称密钥用于后续加密传输</p>
+                    </div>
+                </div>
+                
+                <div class="mt-6 bg-green-500/10 rounded-lg p-4">
+                    <h5 class="text-white font-semibold mb-2">加密算法</h5>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div class="text-slate-300">• 对称加密：AES</div>
+                        <div class="text-slate-300">• 非对称加密：RSA</div>
+                        <div class="text-slate-300">• 哈希算法：SHA-256</div>
+                        <div class="text-slate-300">• 密钥交换：ECDH</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 text-center">
+            <div class="inline-flex items-center space-x-2 bg-slate-800/60 backdrop-blur-sm rounded-lg px-6 py-3 border border-slate-600">
+                <i class="fas fa-layer-group text-blue-400"></i>
+                <span class="text-slate-200 font-medium">纵深防御：多层防护，协同工作</span>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

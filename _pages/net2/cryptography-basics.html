@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密码学基础与加密算法</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .crypto-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .crypto-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .symmetric-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .asymmetric-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-left: 4px solid #8b5cf6;
+        }
+        
+        .hash-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.1) 100%);
+            border-left: 4px solid #22c55e;
+        }
+        
+        .algorithm-demo {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-key text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white">密码学基础与加密算法</h1>
+            </div>
+            <p class="text-xl text-slate-300">构建安全通信的数学基础</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8 mb-8">
+            <div class="crypto-card symmetric-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-balance-scale text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">对称加密</h3>
+                        <p class="text-slate-300">Symmetric Encryption</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-blue-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">工作原理</h4>
+                        <p class="text-slate-300 text-sm">加密和解密使用相同的密钥</p>
+                    </div>
+                    
+                    <div class="bg-blue-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">优点</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 加密速度快</li>
+                            <li>• 适合大量数据加密</li>
+                            <li>• 计算资源消耗低</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-blue-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">常见算法</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• AES (高级加密标准)</li>
+                            <li>• ChaCha20</li>
+                            <li>• Blowfish</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="crypto-card asymmetric-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-key text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">非对称加密</h3>
+                        <p class="text-slate-300">Asymmetric Encryption</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-purple-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">工作原理</h4>
+                        <p class="text-slate-300 text-sm">使用公钥和私钥密钥对</p>
+                    </div>
+                    
+                    <div class="bg-purple-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">优点</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 无需共享密钥</li>
+                            <li>• 支持数字签名</li>
+                            <li>• 更好的密钥管理</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-purple-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">常见算法</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• RSA</li>
+                            <li>• ECC (椭圆曲线加密)</li>
+                            <li>• Diffie-Hellman</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="crypto-card hash-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-fingerprint text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">哈希函数</h3>
+                        <p class="text-slate-300">Hash Functions</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-green-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">工作原理</h4>
+                        <p class="text-slate-300 text-sm">将任意长度输入转换为固定长度输出</p>
+                    </div>
+                    
+                    <div class="bg-green-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">特点</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 单向性 - 不可逆</li>
+                            <li>• 雪崩效应 - 微小输入变化导致巨大输出变化</li>
+                            <li>• 抗碰撞性 - 难以找到相同输出的不同输入</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-500/10 rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">常见算法</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• SHA-256</li>
+                            <li>• MD5 (已不安全)</li>
+                            <li>• BLAKE2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="crypto-card rounded-2xl p-8">
+            <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                <i class="fas fa-cogs text-yellow-400 mr-3"></i>
+                TLS加密通信实例
+            </h3>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">握手过程</h4>
+                    <div class="space-y-3">
+                        <div class="algorithm-demo rounded-lg p-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">1</div>
+                                <span class="text-slate-200">ClientHello - 客户端发送支持的加密套件</span>
+                            </div>
+                        </div>
+                        <div class="algorithm-demo rounded-lg p-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">2</div>
+                                <span class="text-slate-200">ServerHello - 服务器选择加密套件并发送证书</span>
+                            </div>
+                        </div>
+                        <div class="algorithm-demo rounded-lg p-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">3</div>
+                                <span class="text-slate-200">密钥交换 - 使用非对称加密协商对称密钥</span>
+                            </div>
+                        </div>
+                        <div class="algorithm-demo rounded-lg p-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">4</div>
+                                <span class="text-slate-200">加密通信 - 使用对称密钥进行数据传输</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">实际应用</h4>
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg p-4">
+                            <h5 class="text-white font-semibold mb-2">HTTPS网站</h5>
+                            <p class="text-slate-300 text-sm">保护Web浏览器和服务器之间的通信</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-lg p-4">
+                            <h5 class="text-white font-semibold mb-2">VPN连接</h5>
+                            <p class="text-slate-300 text-sm">建立安全的远程访问隧道</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg p-4">
+                            <h5 class="text-white font-semibold mb-2">电子邮件</h5>
+                            <p class="text-slate-300 text-sm">使用S/MIME或PGP加密邮件内容</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

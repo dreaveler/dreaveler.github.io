@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人数据与隐私防护策略</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .protection-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .protection-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .security-tip {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .warning-tip {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
+            border-left: 4px solid #ef4444;
+        }
+        
+        .best-practice {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%);
+            border-left: 4px solid #22c55e;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-user-shield text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white">个人数据与隐私防护策略</h1>
+            </div>
+            <p class="text-xl text-slate-300">全方位保护个人信息安全</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="protection-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-exchange-alt text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">传输安全</h3>
+                        <p class="text-slate-300">Secure Transmission</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="security-tip rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-lock text-blue-400"></i>
+                            <h4 class="text-white font-semibold">优先使用加密协议</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">HTTPS、SFTP等加密传输协议</p>
+                    </div>
+                    
+                    <div class="warning-tip rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-comment text-red-400"></i>
+                            <h4 class="text-white font-semibold">避免明文传输</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">不通过聊天软件发送敏感文件</p>
+                    </div>
+                    
+                    <div class="best-practice rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-file-archive text-green-400"></i>
+                            <h4 class="text-white font-semibold">文档加密</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">使用AES加密（如7-Zip加密压缩）</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="protection-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-key text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">密码安全</h3>
+                        <p class="text-slate-300">Password Security</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="security-tip rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-keyboard text-blue-400"></i>
+                            <h4 class="text-white font-semibold">密码管理器</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">使用专业密码管理工具</p>
+                    </div>
+                    
+                    <div class="best-practice rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-random text-green-400"></i>
+                            <h4 class="text-white font-semibold">唯一随机密码</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">每个账户使用不同密码</p>
+                    </div>
+                    
+                    <div class="best-practice rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-shield-alt text-green-400"></i>
+                            <h4 class="text-white font-semibold">双因素认证</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">启用2FA增加安全层</p>
+                    </div>
+                    
+                    <div class="warning-tip rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-times text-red-400"></i>
+                            <h4 class="text-white font-semibold">禁用自动保存</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">防止浏览器保存敏感账户</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="protection-card rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-desktop text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">终端安全</h3>
+                        <p class="text-slate-300">Endpoint Security</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="security-tip rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-sync-alt text-blue-400"></i>
+                            <h4 class="text-white font-semibold">定期更新</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">及时安装系统和软件更新</p>
+                    </div>
+                    
+                    <div class="security-tip rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-door-closed text-blue-400"></i>
+                            <h4 class="text-white font-semibold">关闭不必要服务</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">关闭不必要的端口与服务</p>
+                    </div>
+                    
+                    <div class="best-practice rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-hdd text-green-400"></i>
+                            <h4 class="text-white font-semibold">磁盘加密</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">启用BitLocker或FileVault</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl p-6 border border-green-500/20">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-lightbulb text-yellow-400 text-2xl"></i>
+                <div>
+                    <h4 class="text-white font-bold text-lg">核心原则：零信任安全模型</h4>
+                    <p class="text-slate-300">"从不信任，始终验证" - 对每个访问请求都进行严格验证，不论其来源</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

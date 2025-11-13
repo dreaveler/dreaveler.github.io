@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中间人攻击（MITM）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .attack-method {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .attack-method:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .case-card {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
+            border-left: 4px solid #ef4444;
+        }
+        
+        .defense-strategy {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%);
+            border-left: 4px solid #22c55e;
+        }
+        
+        .diagram-container {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-exchange-alt text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white">中间人攻击（MITM）</h1>
+            </div>
+            <p class="text-xl text-slate-300">截获通信流量的隐蔽攻击方式</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8 mb-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-cogs text-blue-400 mr-3"></i>
+                    工作原理
+                </h3>
+                <div class="diagram-container rounded-2xl p-6 mb-4">
+                    <div class="text-center">
+                        <div class="flex items-center justify-center space-x-8">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-2">
+                                    <i class="fas fa-user text-white text-2xl"></i>
+                                </div>
+                                <p class="text-white font-semibold">客户端</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-2">
+                                    <i class="fas fa-user-secret text-white text-2xl"></i>
+                                </div>
+                                <p class="text-white font-semibold">攻击者</p>
+                                <p class="text-slate-300 text-xs">中间人</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-2">
+                                    <i class="fas fa-server text-white text-2xl"></i>
+                                </div>
+                                <p class="text-white font-semibold">服务器</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-slate-300 text-sm">
+                            攻击者在通信双方之间插入自己，伪装成合法的通信方
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-3">
+                    <div class="attack-method rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-network-wired text-red-400"></i>
+                            <h4 class="text-white font-semibold">ARP欺骗</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">伪造ARP报文，让目标设备将攻击者MAC地址误认为网关MAC</p>
+                    </div>
+                    <div class="attack-method rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-globe text-red-400"></i>
+                            <h4 class="text-white font-semibold">DNS劫持</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">篡改DNS解析结果，将合法域名指向恶意IP地址</p>
+                    </div>
+                    <div class="attack-method rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-unlock text-red-400"></i>
+                            <h4 class="text-white font-semibold">SSL剥离</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">将HTTPS连接降级为HTTP，便于窃听和篡改</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-exclamation-triangle text-orange-400 mr-3"></i>
+                    典型案例
+                </h3>
+                <div class="space-y-4">
+                    <div class="case-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <i class="fas fa-wifi text-orange-400 text-xl"></i>
+                            <h4 class="text-white font-semibold">公共Wi-Fi劫持</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm mb-2">攻击者搭建假热点"Free_WiFi"，用户连接后所有流量经过攻击者设备</p>
+                        <div class="bg-slate-800 rounded p-2">
+                            <code class="text-red-400 text-xs">受害者 → 假热点 → 攻击者 → 真实网络</code>
+                        </div>
+                    </div>
+                    
+                    <div class="case-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <i class="fas fa-building text-orange-400 text-xl"></i>
+                            <h4 class="text-white font-semibold">企业内部ARP攻击</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">伪装网关拦截数据包，窃取企业敏感信息和登录凭证</p>
+                        <div class="bg-slate-800 rounded p-2">
+                            <code class="text-red-400 text-xs">员工设备 → 攻击者（伪装网关） → 真实网关</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                <i class="fas fa-shield-alt text-green-400 mr-3"></i>
+                防御思路
+            </h3>
+            <div class="grid grid-cols-4 gap-4">
+                <div class="defense-strategy rounded-lg p-4 text-center">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                        <i class="fas fa-lock text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">端到端加密</h4>
+                    <p class="text-slate-300 text-sm">使用HTTPS、VPN等加密通信</p>
+                </div>
+                
+                <div class="defense-strategy rounded-lg p-4 text-center">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                        <i class="fas fa-certificate text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">证书验证</h4>
+                    <p class="text-slate-300 text-sm">检查SSL证书指纹和颁发机构</p>
+                </div>
+                
+                <div class="defense-strategy rounded-lg p-4 text-center">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                        <i class="fas fa-network-wired text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">ARP绑定</h4>
+                    <p class="text-slate-300 text-sm">开启ARP绑定或使用静态IP</p>
+                </div>
+                
+                <div class="defense-strategy rounded-lg p-4 text-center">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                        <i class="fas fa-ban text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">禁用不安全协议</h4>
+                    <p class="text-slate-300 text-sm">禁用Telnet、FTP等明文协议</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

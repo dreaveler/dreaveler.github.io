@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业级安全架构与SOC运营</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .architecture-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .architecture-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .defense-layer {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .soc-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-left: 4px solid #8b5cf6;
+        }
+        
+        .process-step {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.1) 100%);
+            border-left: 4px solid #22c55e;
+        }
+        
+        .tech-stack {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-building text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white">企业级安全架构与SOC运营</h1>
+            </div>
+            <p class="text-xl text-slate-300">构建现代化的企业安全防护体系</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8 mb-8">
+            <div class="architecture-card rounded-2xl p-6">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                    <i class="fas fa-layer-group text-blue-400 mr-3"></i>
+                    纵深防御架构
+                </h3>
+                
+                <div class="space-y-4">
+                    <div class="defense-layer rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-users text-blue-400"></i>
+                            <h4 class="text-white font-semibold">物理层安全</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">数据中心物理访问控制、环境监控</p>
+                    </div>
+                    
+                    <div class="defense-layer rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-network-wired text-blue-400"></i>
+                            <h4 class="text-white font-semibold">网络层安全</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">防火墙、IDS/IPS、网络分段、DDoS防护</p>
+                    </div>
+                    
+                    <div class="defense-layer rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-desktop text-blue-400"></i>
+                            <h4 class="text-white font-semibold">主机层安全</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">终端防护、漏洞管理、配置加固</p>
+                    </div>
+                    
+                    <div class="defense-layer rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-code text-blue-400"></i>
+                            <h4 class="text-white font-semibold">应用层安全</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">WAF、代码审计、安全开发生命周期</p>
+                    </div>
+                    
+                    <div class="defense-layer rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-database text-blue-400"></i>
+                            <h4 class="text-white font-semibold">数据层安全</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">数据加密、访问控制、备份恢复</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="architecture-card rounded-2xl p-6">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                    <i class="fas fa-headset text-purple-400 mr-3"></i>
+                    SOC安全运营中心
+                </h3>
+                
+                <div class="space-y-4">
+                    <div class="soc-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-eye text-purple-400"></i>
+                            <h4 class="text-white font-semibold">7×24小时监控</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">全天候安全事件监控和分析</p>
+                    </div>
+                    
+                    <div class="soc-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-bolt text-purple-400"></i>
+                            <h4 class="text-white font-semibold">快速响应</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">自动化响应和人工干预相结合</p>
+                    </div>
+                    
+                    <div class="soc-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-chart-line text-purple-400"></i>
+                            <h4 class="text-white font-semibold">威胁情报</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">整合内外部威胁情报源</p>
+                    </div>
+                    
+                    <div class="soc-card rounded-lg p-4">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fas fa-graduation-cap text-purple-400"></i>
+                            <h4 class="text-white font-semibold">持续改进</h4>
+                        </div>
+                        <p class="text-slate-300 text-sm">基于攻防演练不断优化流程</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="architecture-card rounded-2xl p-8">
+            <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                <i class="fas fa-cogs text-green-400 mr-3"></i>
+                SOC运营流程
+            </h3>
+            
+            <div class="grid grid-cols-5 gap-4">
+                <div class="process-step rounded-lg p-4 text-center">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                        <i class="fas fa-search text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">检测</h4>
+                    <p class="text-slate-300 text-sm">通过多种手段发现安全威胁</p>
+                </div>
+                
+                <div class="process-step rounded-lg p-4 text-center">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                        <i class="fas fa-filter text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">分析</h4>
+                    <p class="text-slate-300 text-sm">对事件进行分类和优先级排序</p>
+                </div>
+                
+                <div class="process-step rounded-lg p-4 text-center">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                        <i class="fas fa-exclamation-triangle text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">响应</h4>
+                    <p class="text-slate-300 text-sm">采取 containment 和 remediation 措施</p>
+                </div>
+                
+                <div class="process-step rounded-lg p-4 text-center">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                        <i class="fas fa-undo text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">恢复</h4>
+                    <p class="text-slate-300 text-sm">恢复正常业务运营</p>
+                </div>
+                
+                <div class="process-step rounded-lg p-4 text-center">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                        <i class="fas fa-book text-xl"></i>
+                    </div>
+                    <h4 class="text-white font-semibold mb-2">总结</h4>
+                    <p class="text-slate-300 text-sm">记录经验教训，改进流程</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>

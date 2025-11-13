@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络安全基础与实践培训</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .welcome-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="max-w-2xl mx-auto p-8">
+        <div class="welcome-card rounded-2xl p-8 text-center">
+            <div class="mb-8">
+                <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-shield-alt text-white text-3xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white mb-4">网络安全基础与实践培训</h1>
+                <p class="text-xl text-slate-300 mb-8">全面深入的网络安全学习体系</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-slate-800/60 rounded-lg p-6">
+                    <h3 class="text-2xl font-bold text-white mb-4">📋 培训内容</h3>
+                    <div class="grid grid-cols-2 gap-4 text-left">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span class="text-slate-200">基础威胁分析</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span class="text-slate-200">高级攻击技术</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span class="text-slate-200">防御体系构建</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span class="text-slate-200">实操演练</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span class="text-slate-200">企业安全架构</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span class="text-slate-200">现代安全技术</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="present.html" class="btn-primary w-full inline-block py-4 px-8 rounded-lg text-white font-bold text-lg">
+                        <i class="fas fa-play mr-2"></i>
+                        开始演示
+                    </a>
+                    <a href="download.html" class="btn-secondary w-full inline-block py-4 px-8 rounded-lg text-white font-bold text-lg">
+                        <i class="fas fa-download mr-2"></i>
+                        下载PPT
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-slate-400 text-sm">
+                <p>💡 支持键盘导航(← →)、触摸滑动和全屏模式</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

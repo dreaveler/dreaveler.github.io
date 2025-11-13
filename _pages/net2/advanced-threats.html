@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高级网络威胁类型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .threat-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .threat-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .ransomware-card {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(220, 38, 38, 0.1) 100%);
+            border-left: 4px solid #ef4444;
+        }
+        
+        .ddos-card {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(217, 119, 6, 0.1) 100%);
+            border-left: 4px solid #f97316;
+        }
+        
+        .zero-day-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-left: 4px solid #8b5cf6;
+        }
+        
+        .apt-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.1) 100%);
+            border-left: 4px solid #22c55e;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-exclamation-triangle text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-black text-white">高级网络威胁类型</h1>
+            </div>
+            <p class="text-xl text-slate-300">深入了解现代网络安全的高级威胁</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8">
+            <div class="threat-card ransomware-scenario rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-lock text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">勒索软件</h3>
+                        <p class="text-slate-300">Ransomware</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="ransomware-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">攻击特点</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 加密用户文件，要求支付赎金</li>
+                            <li>• 通常通过钓鱼邮件或漏洞传播</li>
+                            <li>• 具有横向移动能力，感染整个网络</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ransomware-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">典型案例</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• WannaCry (2017) - 影响全球150多个国家</li>
+                            <li>• Petya/NotPetya - 伪装成勒索软件的擦除器</li>
+                            <li>• Ryuk - 针对企业的高价值目标</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ransomware-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">防御策略</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 定期备份重要数据</li>
+                            <li>• 及时更新系统补丁</li>
+                            <li>• 启用邮件过滤和终端防护</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="threat-card ddos-scenario rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-wave-square text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">DDoS攻击</h3>
+                        <p class="text-slate-300">Distributed Denial of Service</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="ddos-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">攻击类型</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 容量耗尽攻击 - 耗尽网络带宽</li>
+                            <li>• 协议攻击 - 利用协议漏洞</li>
+                            <li>• 应用层攻击 - 针对特定应用</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ddos-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">攻击手段</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 利用僵尸网络(Botnet)发动攻击</li>
+                            <li>• 反射放大攻击(DNS、NTP等)</li>
+                            <li>• 应用层慢速攻击(Slowloris等)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ddos-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">防护措施</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 使用CDN和流量清洗服务</li>
+                            <li>• 配置防火墙和IPS规则</li>
+                            <li>• 建立应急响应预案</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="threat-card zero-day-scenario rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-bomb text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">零日漏洞</h3>
+                        <p class="text-slate-300">Zero-Day Exploits</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="zero-day-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">漏洞特征</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 软件厂商尚未发现或修复的漏洞</li>
+                            <li>• 攻击者利用时间窗口发动攻击</li>
+                            <li>• 在黑市上具有极高价值</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="zero-day-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">常见类型</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 缓冲区溢出漏洞</li>
+                            <li>• 代码注入漏洞</li>
+                            <li>• 权限提升漏洞</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="zero-day-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">防护策略</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 采用纵深防御架构</li>
+                            <li>• 使用行为检测技术</li>
+                            <li>• 建立威胁情报体系</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="threat-card apt-scenario rounded-2xl p-6">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-user-ninja text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">APT攻击</h3>
+                        <p class="text-slate-300">Advanced Persistent Threat</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="apt-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">攻击特点</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 长期潜伏，持续渗透</li>
+                            <li>• 针对特定目标的高价值攻击</li>
+                            <li>• 使用多种攻击手段组合</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="apt-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">攻击阶段</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 初始渗透 - 获得初步访问权限</li>
+                            <li>• 权限提升 - 获取更高权限</li>
+                            <li>• 横向移动 - 扩展控制范围</li>
+                            <li>• 数据窃取 - 获取敏感信息</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="apt-card rounded-lg p-4">
+                        <h4 class="text-white font-semibold mb-2">检测方法</h4>
+                        <ul class="text-slate-300 text-sm space-y-1">
+                            <li>• 异常行为分析</li>
+                            <li>• 网络流量监控</li>
+                            <li>• 终端检测响应(EDR)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('go-next', '*');
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            window.parent.postMessage('go-prev', '*');
+        }
+    });
+</script>
+</body>
+</html>
