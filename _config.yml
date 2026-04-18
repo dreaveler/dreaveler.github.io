@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "dreaveler's Homepage"
 title_separator          : "-"
 name                     : &name "dreaveler"
-description              : &description "A PKU AI freshman"
+description              : &description "PKU AI undergraduate sharing notes and project writeups."
 url                      : https://dreaveler.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dreaveler/dreaveler.github.io"
@@ -25,11 +25,11 @@ author:
   avatar           : "dreaveler.png"
   name             : "dreaveler"
   pronouns         : "He" 
-  bio              : "A PKU AI freshman."
+  bio              : "PKU AI undergraduate. Notes, coursework, and project writeups."
   location         : "北京·中国"
-  employer         : "Peking Universityy"
+  employer         : "Peking University"
   uri              : # URL
-  email            : "2169448673@qq.com" 
+  email            : "2169448673@qq.com"
 
   # Academic websites
   academia         : # URL

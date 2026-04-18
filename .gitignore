@@ -16,3 +16,4 @@ package-lock.json
 vendor/
 .bundle/
 .vs/
+.DS_Store

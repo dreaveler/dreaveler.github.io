@@ -11,54 +11,35 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* B.Eng. in Artificial Intelligence, Peking University, 2024-present (expected 2028)
+  * School of Electronics Engineering and Computer Science
+  * Current interests: embodied AI, motion simulation, computer vision, and natural language processing
 
-Work experience
+Selected coursework
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Software Design Practice
+* Data Structures and Algorithms A
+* AI中的编程
+* 计算机视觉
+* 自然语言处理基础
+* 中级微观经济学
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+Projects and writing
+======
+* Open course notes on this site, covering 软件设计实践、数据结构与算法 A、AI中的编程、计算机视觉 and related review material
+* MoCCA Lab 1 coursework on forward/inverse kinematics, BVH parsing, and motion retargeting
+* AutoPku: tooling and workflows for PKU course notices, notes, and homework automation
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Python
+* C++
+* PyTorch
+* Git / GitHub
+* Notion-based note taking and documentation
 
-Publications
+Links
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* Homepage: [https://dreaveler.github.io](https://dreaveler.github.io)
+* GitHub: [https://github.com/dreaveler](https://github.com/dreaveler)
+* Email: [2169448673@qq.com](mailto:2169448673@qq.com)
