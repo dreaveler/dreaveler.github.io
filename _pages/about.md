@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 ## 关于我
-我是[北京大学](https://www.pku.edu.cn/)[信息科学技术学院](https://eecs.pku.edu.cn/)智能方向的一名本科生，目前处于大二下。近期主要在课程与阅读中关注 embodied AI、运动仿真、计算机视觉以及自然语言处理相关内容，也在逐步把课程笔记和阶段性项目整理到站点上。  
+我是[北京大学](https://www.pku.edu.cn/)[信息科学技术学院](https://eecs.pku.edu.cn/)智能方向的一名本科生，目前处于大二下。近期主要在课程与阅读中关注 embodied AI、运动仿真等方向，也在逐步把课程笔记和阶段性项目整理到站点上。  
 平时喜欢跑步、打羽毛球、弹吉他。大多数运动都会一点。
 
 [Email](mailto:2169448673@qq.com) / [Github](https://github.com/dreaveler) / [Wechat](../images/wechat.jpg)  

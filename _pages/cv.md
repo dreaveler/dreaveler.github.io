@@ -13,7 +13,7 @@ Education
 ======
 * B.Eng. in Artificial Intelligence, Peking University, 2024-present (expected 2028)
   * School of Electronics Engineering and Computer Science
-  * Current interests: embodied AI, motion simulation, computer vision, and natural language processing
+  * Current interests: embodied AI and motion simulation
 
 Selected coursework
 ======
