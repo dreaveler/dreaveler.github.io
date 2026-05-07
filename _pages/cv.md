@@ -25,10 +25,12 @@ Selected coursework
 * 计算机视觉
 * 自然语言处理基础
 * 中级微观经济学
+* Trustworthy Machine Learning
+* Character Animation and Motion Simulation
 
 Projects and writing
 ======
-* Open course notes on this site, covering 软件设计实践、数据结构与算法 A、算法设计与分析、AI中的编程、可视计算与交互概论、计算机视觉、自然语言处理基础、中级微观经济学 and related review material
+* Open course notes on this site, covering 软件设计实践、数据结构与算法 A、算法设计与分析、AI中的编程、可视计算与交互概论、计算机视觉、自然语言处理基础、中级微观经济学、可信机器学习、角色动画与运动仿真 and related review material
 * MoCCA Lab 1 coursework on forward/inverse kinematics, BVH parsing, and motion retargeting
 * AutoPku: tooling and workflows for PKU course notices, notes, and homework automation
 
