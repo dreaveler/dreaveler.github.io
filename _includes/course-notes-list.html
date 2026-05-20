@@ -1,0 +1,19 @@
+{% assign course_notes = site.notes | where: "subject", include.subject | sort: "number" %}
+
+{% if course_notes.size > 0 %}
+<div class="course-note-list">
+  {% for note in course_notes %}
+    <a class="course-note-list__item" href="{{ note.url | relative_url }}">
+      <span class="course-note-list__number">{{ note.number | default: forloop.index }}</span>
+      <span class="course-note-list__body">
+        <span class="course-note-list__title">{{ note.title }}</span>
+        {% if note.date %}
+          <span class="course-note-list__meta">{{ note.date | date: "%Y-%m-%d" }}</span>
+        {% endif %}
+      </span>
+    </a>
+  {% endfor %}
+</div>
+{% else %}
+<p class="course-note-list__empty">这一组笔记还没有整理到站内。</p>
+{% endif %}

@@ -8,12 +8,12 @@ author_profile: true
 
 除了站内分主题条目，我也把完整课程笔记和一份适合考前快速通读的整理版 PDF 放在这里，方便按“课程主线”或“题型模板 + 典型结论”的方式回看：
 
-- [算法设计与分析课程笔记 PDF](/files/算法设计与分析课程笔记.pdf)
-- [算法设计与分析期中复习总结 PDF](/files/算法设计与分析期中复习总结.pdf)
+<div class="note-downloads">
+  <strong>下载资料</strong>
+  <ul>
+    <li><a href="{{ '/files/算法设计与分析课程笔记.pdf' | relative_url }}">算法设计与分析课程笔记 PDF</a></li>
+    <li><a href="{{ '/files/算法设计与分析期中复习总结.pdf' | relative_url }}">算法设计与分析期中复习总结 PDF</a></li>
+  </ul>
+</div>
 
-{% assign course_notes = site.notes | where: "subject", "算法设计与分析" | sort: "number" %}
-<ul>
-{% for note in course_notes %}
-  <li><a href="{{ note.url | relative_url }}">{{ note.title }}</a></li>
-{% endfor %}
-</ul>
+{% include course-notes-list.html subject="算法设计与分析" %}
