@@ -8,12 +8,12 @@ author_profile: true
 
 除了站内分章节笔记，我也把最近整理出的两份 PDF 版资料一并放到这里，分别适合完整通读与期中前的专题复习：
 
-- [完整课程笔记 PDF](/files/FNLP课程笔记_v7_full.pdf)
-- [期中专题复习笔记 PDF](/files/FNLP期中专题复习笔记.pdf)
+<div class="note-downloads">
+  <strong>下载资料</strong>
+  <ul>
+    <li><a href="{{ '/files/FNLP课程笔记_v7_full.pdf' | relative_url }}">完整课程笔记 PDF</a></li>
+    <li><a href="{{ '/files/FNLP期中专题复习笔记.pdf' | relative_url }}">期中专题复习笔记 PDF</a></li>
+  </ul>
+</div>
 
-{% assign course_notes = site.notes | where: "subject", "自然语言处理基础" | sort: "number" %}
-<ul>
-{% for note in course_notes %}
-  <li><a href="{{ note.url | relative_url }}">{{ note.title }}</a></li>
-{% endfor %}
-</ul>
+{% include course-notes-list.html subject="自然语言处理基础" %}

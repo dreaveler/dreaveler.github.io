@@ -5,28 +5,88 @@ permalink: /notes/
 author_profile: true
 ---
 
-{% assign subjects = site.notes | map: "collection" | uniq | sort %}
-<h2>2024-2025第二学期——大一下</h2>
-<ul>
-  <li><a href="{{ '/notes/软件设计实践/' | relative_url }}">软件设计实践</a></li>
-</ul>
-<h2>2025-2026第一学期——大二上</h2>
-<ul>
-  <li><a href="{{ '/notes/数据结构与算法A/' | relative_url }}">数据结构与算法A</a></li>
-  <li><a href="{{ '/notes/AI中的编程/' | relative_url }}">AI中的编程</a></li>
-  <li><a href="{{ '/notes/可视计算与交互概论/' | relative_url }}">可视计算与交互概论</a></li>
-  <li><a href="{{ '/notes/计算机视觉/' | relative_url }}">计算机视觉</a></li>
-</ul>
-<h2>2025-2026第二学期——大二下</h2>
-<ul>
-  <li><a href="{{ '/notes/算法设计与分析/' | relative_url }}">算法设计与分析</a></li>
-  <li><a href="{{ '/notes/自然语言处理基础/' | relative_url }}">自然语言处理基础</a></li>
-  <li><a href="{{ '/notes/中级微观经济学/' | relative_url }}">中级微观经济学</a></li>
-  <li><a href="{{ '/notes/可信机器学习/' | relative_url }}">可信机器学习</a></li>
-  <li><a href="{{ '/notes/角色动画与运动仿真/' | relative_url }}">角色动画与运动仿真</a></li>
-</ul>
-<h2>External</h2>
-<ul>
-  <li><a href="https://steep-yamamomo-a67.notion.site/gd" target="_blank">高党复习（Notion）</a></li>
-  
-</ul>
+<p class="notes-intro">这些是我按课程整理的公开笔记。站内条目优先保留已经能稳定阅读、复习和回看的版本；图像较重或仍在快速变化的材料会先放在外部页面。</p>
+
+<section class="notes-semester">
+  <h2>2024-2025 第二学期 · 大一下</h2>
+  <div class="notes-grid">
+    {% assign software_design_notes = site.notes | where: "subject", "软件设计实践" %}
+    <a class="notes-card" href="{{ '/notes/软件设计实践/' | relative_url }}">
+      <span class="notes-card__title">软件设计实践</span>
+      <span class="notes-card__meta">{{ software_design_notes.size }} 篇站内笔记</span>
+    </a>
+  </div>
+</section>
+
+<section class="notes-semester">
+  <h2>2025-2026 第一学期 · 大二上</h2>
+  <div class="notes-grid">
+    {% assign dsa_notes = site.notes | where: "subject", "数据结构与算法A" %}
+    <a class="notes-card" href="{{ '/notes/数据结构与算法A/' | relative_url }}">
+      <span class="notes-card__title">数据结构与算法A</span>
+      <span class="notes-card__meta">{{ dsa_notes.size }} 篇站内笔记</span>
+    </a>
+
+    {% assign ai_programming_notes = site.notes | where: "subject", "AI中的编程" %}
+    <a class="notes-card" href="{{ '/notes/AI中的编程/' | relative_url }}">
+      <span class="notes-card__title">AI中的编程</span>
+      <span class="notes-card__meta">{{ ai_programming_notes.size }} 篇站内笔记</span>
+    </a>
+
+    <a class="notes-card" href="{{ '/notes/可视计算与交互概论/' | relative_url }}">
+      <span class="notes-card__title">可视计算与交互概论</span>
+      <span class="notes-card__meta">外部整理稿</span>
+    </a>
+
+    {% assign cv_notes = site.notes | where: "subject", "计算机视觉" %}
+    <a class="notes-card" href="{{ '/notes/计算机视觉/' | relative_url }}">
+      <span class="notes-card__title">计算机视觉</span>
+      <span class="notes-card__meta">{{ cv_notes.size }} 篇站内笔记</span>
+    </a>
+  </div>
+</section>
+
+<section class="notes-semester">
+  <h2>2025-2026 第二学期 · 大二下</h2>
+  <div class="notes-grid">
+    {% assign algorithm_design_notes = site.notes | where: "subject", "算法设计与分析" %}
+    <a class="notes-card" href="{{ '/notes/算法设计与分析/' | relative_url }}">
+      <span class="notes-card__title">算法设计与分析</span>
+      <span class="notes-card__meta">{{ algorithm_design_notes.size }} 篇站内笔记 + PDF</span>
+    </a>
+
+    {% assign fnlp_notes = site.notes | where: "subject", "自然语言处理基础" %}
+    <a class="notes-card" href="{{ '/notes/自然语言处理基础/' | relative_url }}">
+      <span class="notes-card__title">自然语言处理基础</span>
+      <span class="notes-card__meta">{{ fnlp_notes.size }} 篇站内笔记 + PDF</span>
+    </a>
+
+    {% assign microeconomics_notes = site.notes | where: "subject", "中级微观经济学" %}
+    <a class="notes-card" href="{{ '/notes/中级微观经济学/' | relative_url }}">
+      <span class="notes-card__title">中级微观经济学</span>
+      <span class="notes-card__meta">{{ microeconomics_notes.size }} 篇站内笔记 + PDF</span>
+    </a>
+
+    {% assign tml_notes = site.notes | where: "subject", "可信机器学习" %}
+    <a class="notes-card" href="{{ '/notes/可信机器学习/' | relative_url }}">
+      <span class="notes-card__title">可信机器学习</span>
+      <span class="notes-card__meta">{{ tml_notes.size }} 篇站内笔记 + PDF</span>
+    </a>
+
+    {% assign mocca_notes = site.notes | where: "subject", "角色动画与运动仿真" %}
+    <a class="notes-card" href="{{ '/notes/角色动画与运动仿真/' | relative_url }}">
+      <span class="notes-card__title">角色动画与运动仿真</span>
+      <span class="notes-card__meta">{{ mocca_notes.size }} 篇站内笔记 + PDF</span>
+    </a>
+  </div>
+</section>
+
+<section class="notes-semester">
+  <h2>External</h2>
+  <div class="notes-grid">
+    <a class="notes-card" href="https://steep-yamamomo-a67.notion.site/gd" target="_blank" rel="noopener">
+      <span class="notes-card__title">高党复习</span>
+      <span class="notes-card__meta">Notion</span>
+    </a>
+  </div>
+</section>

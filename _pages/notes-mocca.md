@@ -8,11 +8,11 @@ author_profile: true
 
 我优先保留了适合公开阅读与复习使用的版本：一方面可以直接从 PDF 通读整门课的知识地图，另一方面也保留站内条目，方便按“课程地图 -> 物理控制 -> 行走控制”的顺序快速定位重点。
 
-- [完整课程笔记 PDF](/files/角色动画与运动仿真课程笔记.pdf)
+<div class="note-downloads">
+  <strong>下载资料</strong>
+  <ul>
+    <li><a href="{{ '/files/角色动画与运动仿真课程笔记.pdf' | relative_url }}">完整课程笔记 PDF</a></li>
+  </ul>
+</div>
 
-{% assign course_notes = site.notes | where: "subject", "角色动画与运动仿真" | sort: "number" %}
-<ul>
-{% for note in course_notes %}
-  <li><a href="{{ note.url | relative_url }}">{{ note.title }}</a></li>
-{% endfor %}
-</ul>
+{% include course-notes-list.html subject="角色动画与运动仿真" %}

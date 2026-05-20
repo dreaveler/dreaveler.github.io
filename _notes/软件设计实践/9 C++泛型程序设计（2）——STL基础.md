@@ -3,9 +3,10 @@ number: 9
 title: "9 C++泛型程序设计（2）—— STL基础"
 subject: 软件设计实践
 date: 2025-6-27
+tags:
+  - 泛型程序设计
 ---
 # STL基础
-tag: #泛型程序设计 
 ## 顺序容器
 vector
 deque
@@ -73,5 +74,3 @@ insert  erase
 	lambda表达式   
 		实际上是一个重载了运算符（）的匿名性对象  
 		捕获列表为空可以隐式转换为函数指针  
-previous: [[8 C++泛型程序设计(1) ——模板与STL初步]]
-next:[[10 C++泛型程序设计（3）——STL进阶]]
