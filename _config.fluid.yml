@@ -31,6 +31,10 @@ font:
   letter_spacing: 0
   code_font_size: 85%
 
+custom_js:
+  - /js/archive-cards.js
+  - /js/daily-materials.js
+
 custom_css:
   - /css/custom.css
 
