@@ -1,14 +1,24 @@
 "use strict";
 
+const BANNERS = "/images/banners/";
+
+// 每门课对应一张风景/星空背景图（与 banner、笔记卡片共用一套视觉）
+const coverByCourse = {
+  "算法设计与分析": "nebula.jpg",
+  "可信机器学习": "galaxy.jpg",
+  "AI中的编程": "starfield.jpg",
+  "自然语言处理基础": "aurora.jpg",
+  "中级微观经济学": "mountains.jpg",
+  "角色动画与运动仿真": "clouds.jpg",
+  "软件设计实践": "ocean.jpg",
+  "数据结构与算法A": "desert.jpg",
+  "计算机视觉": "starfield.jpg"
+};
+
 const fallbackCovers = [
-  "/images/dreaveler.png",
-  "/images/homepage.png",
-  "/images/themes/homepage-light.png",
-  "/images/themes/homepage-dark.png",
-  "/images/editing-talk.png",
-  "/images/foo-bar-identity.jpg",
-  "/images/image-alignment-580x300.jpg"
-];
+  "nebula.jpg", "starfield.jpg", "aurora.jpg", "ocean.jpg",
+  "mountains.jpg", "clouds.jpg", "desert.jpg", "galaxy.jpg"
+].map(name => BANNERS + name);
 
 function plainText(value) {
   return String(value || "")
@@ -34,8 +44,17 @@ function collectionNames(collection) {
   return out;
 }
 
+function courseCover(post) {
+  const names = collectionNames(post.categories);
+  for (const name of names) {
+    if (coverByCourse[name]) return BANNERS + coverByCourse[name];
+  }
+  return null;
+}
+
 function chooseCover(post, index) {
-  return post.cover || post.banner_img || post.thumbnail || fallbackCovers[index % fallbackCovers.length];
+  return post.cover || post.banner_img || post.thumbnail
+    || courseCover(post) || fallbackCovers[index % fallbackCovers.length];
 }
 
 function readMinutes(text) {

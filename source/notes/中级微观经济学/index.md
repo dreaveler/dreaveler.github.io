@@ -1,5 +1,6 @@
 ---
 title: 中级微观经济学
+banner_img: /images/banners/mountains.jpg
 layout: page
 permalink: /notes/中级微观经济学/
 ---

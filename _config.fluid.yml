@@ -67,7 +67,7 @@ banner:
   width_height_ratio: 1.0
 
 index:
-  banner_img: /images/dreaveler.png
+  banner_img: /images/banners/starfield.jpg
   banner_img_height: 96
   banner_mask_alpha: 0.52
   slogan:
@@ -82,7 +82,7 @@ index:
     tag: true
 
 post:
-  banner_img: /images/dreaveler.png
+  banner_img: /images/banners/nebula.jpg
   banner_img_height: 66
   banner_mask_alpha: 0.56
   meta:
@@ -128,13 +128,13 @@ post:
     enable: false
 
 archive:
-  banner_img: /images/dreaveler.png
+  banner_img: /images/banners/galaxy.jpg
   banner_img_height: 58
   banner_mask_alpha: 0.55
 
 category:
   enable: true
-  banner_img: /images/dreaveler.png
+  banner_img: /images/banners/aurora.jpg
   banner_img_height: 58
   banner_mask_alpha: 0.55
   order_by: name
@@ -144,13 +144,13 @@ category:
 
 tag:
   enable: true
-  banner_img: /images/dreaveler.png
+  banner_img: /images/banners/clouds.jpg
   banner_img_height: 58
   banner_mask_alpha: 0.55
 
 about:
   enable: true
-  banner_img: /images/dreaveler.png
+  banner_img: /images/banners/mountains.jpg
   banner_img_height: 68
   banner_mask_alpha: 0.52
   avatar: /images/dreaveler.png
@@ -165,7 +165,7 @@ links:
   enable: true
   title: 友栏
   subtitle: 与同路人保持联结
-  banner_img: /images/dreaveler.png
+  banner_img: /images/banners/ocean.jpg
   banner_img_height: 58
   banner_mask_alpha: 0.55
   items:
@@ -195,13 +195,13 @@ links:
     enable: false
 
 page:
-  banner_img: /images/dreaveler.png
+  banner_img: /images/banners/nebula.jpg
   banner_img_height: 58
   banner_mask_alpha: 0.55
 
 page404:
   enable: true
-  banner_img: /images/dreaveler.png
+  banner_img: /images/banners/desert.jpg
   banner_img_height: 85
   banner_mask_alpha: 0.55
 

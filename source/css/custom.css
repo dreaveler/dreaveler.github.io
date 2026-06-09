@@ -541,3 +541,66 @@ html[data-user-color-scheme="dark"] .daily-material-note {
     margin: 1.5rem 0 0;
   }
 }
+
+/* ============ 课程卡片：风景 / 星空背景图 ============ */
+/* 与文章卡片 (.archive-card) 共用「图片 + 暗色遮罩 + 白字」视觉。
+   背景图由每张卡片 inline 的 --notes-card-img 提供；只作用于 .notes-card，
+   .repo-card / .home-link-card / .course-note-row 仍保持浅色卡片。 */
+.notes-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 7.5rem;
+  padding: 1.1rem 1.2rem;
+  border-color: rgba(255, 255, 255, 0.16);
+  background: transparent;
+  color: #fff !important;
+}
+
+.notes-card::before,
+.notes-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+}
+
+.notes-card::before {
+  z-index: -2;
+  background: var(--notes-card-img, linear-gradient(135deg, #1f3144, #2f4154)) center / cover no-repeat;
+  transform: scale(1.04);
+  transition: transform 0.22s ease;
+}
+
+.notes-card::after {
+  z-index: -1;
+  background:
+    linear-gradient(120deg, rgba(20, 28, 38, 0.82), rgba(20, 28, 38, 0.5) 60%, rgba(20, 28, 38, 0.22)),
+    radial-gradient(circle at top right, rgba(224, 111, 69, 0.26), transparent 42%);
+}
+
+.notes-card:hover {
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+.notes-card:hover::before {
+  transform: scale(1.09);
+}
+
+.notes-card__title {
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.notes-card__meta {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* 暗色模式下保持图片卡观感，不沿用通用深底覆盖 */
+html[data-user-color-scheme="dark"] .notes-card {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+html[data-user-color-scheme="dark"] .notes-card__title {
+  color: #fff;
+}

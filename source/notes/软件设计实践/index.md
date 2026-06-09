@@ -1,5 +1,6 @@
 ---
 title: 软件设计实践
+banner_img: /images/banners/ocean.jpg
 layout: page
 permalink: /notes/软件设计实践/
 ---

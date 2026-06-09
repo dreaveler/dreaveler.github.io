@@ -1,5 +1,6 @@
 ---
 title: 角色动画与运动仿真
+banner_img: /images/banners/clouds.jpg
 layout: page
 permalink: /notes/角色动画与运动仿真/
 ---

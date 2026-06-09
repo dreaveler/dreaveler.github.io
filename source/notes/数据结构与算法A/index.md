@@ -1,5 +1,6 @@
 ---
 title: 数据结构与算法A
+banner_img: /images/banners/desert.jpg
 layout: page
 permalink: /notes/数据结构与算法A/
 ---

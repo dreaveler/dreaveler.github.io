@@ -1,5 +1,6 @@
 ---
 title: 可视计算与交互概论
+banner_img: /images/banners/galaxy.jpg
 layout: page
 permalink: /notes/可视计算与交互概论/
 ---

@@ -1,5 +1,6 @@
 ---
 title: 算法设计与分析
+banner_img: /images/banners/nebula.jpg
 layout: page
 permalink: /notes/算法设计与分析/
 ---

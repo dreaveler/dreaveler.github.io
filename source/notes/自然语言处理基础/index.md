@@ -1,5 +1,6 @@
 ---
 title: 自然语言处理基础
+banner_img: /images/banners/aurora.jpg
 layout: page
 permalink: /notes/自然语言处理基础/
 ---
