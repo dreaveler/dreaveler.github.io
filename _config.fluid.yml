@@ -207,7 +207,7 @@ page404:
 
 footer:
   content: '
-    <span class="site-footer-line">建站时间 <time id="site-started-at" datetime="2026-05-20" data-start-date="2026-05-20">2026-05-20</time><span id="site-runtime-days" class="site-runtime-days"></span></span>
+    <span class="site-footer-line">建站时间 <time id="site-started-at" datetime="2025-06-16" data-start-date="2025-06-16">2025-06-16</time><span id="site-runtime-days" class="site-runtime-days"></span></span>
     <span class="footer-sep">·</span>
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
     <i class="iconfont icon-love"></i>
