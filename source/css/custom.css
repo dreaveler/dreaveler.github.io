@@ -112,6 +112,69 @@
   font-size: 0.88rem;
 }
 
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  line-height: 1.8;
+}
+
+.site-footer-line {
+  color: #64748b;
+}
+
+.site-runtime-days {
+  color: #e06f45;
+  font-weight: 700;
+}
+
+.footer-sep {
+  color: #aab6c4;
+}
+
+.links .card {
+  padding: 0.45rem;
+  border: 0;
+  background: transparent;
+}
+
+.links .card-body {
+  border: 1px solid rgba(47, 65, 84, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.76)),
+    radial-gradient(circle at top right, rgba(224, 111, 69, 0.14), transparent 38%);
+  box-shadow: 0 14px 34px rgba(33, 45, 56, 0.1);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.links .card-body:hover {
+  border-color: rgba(33, 127, 134, 0.36);
+  box-shadow: 0 18px 38px rgba(33, 45, 56, 0.14);
+  transform: translateY(-2px);
+}
+
+.links .link-title {
+  color: #26323d;
+  font-weight: 800;
+}
+
+.links .link-intro {
+  color: #64748b;
+}
+
+.links-note {
+  margin: 1.5rem 0 0;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid #e06f45;
+  border-radius: 8px;
+  background: rgba(224, 111, 69, 0.08);
+  color: #64748b;
+  line-height: 1.7;
+}
+
 .archive-card-list {
   display: grid;
   gap: 1rem;
@@ -371,15 +434,27 @@
 html[data-user-color-scheme="dark"] .notes-card,
 html[data-user-color-scheme="dark"] .repo-card,
 html[data-user-color-scheme="dark"] .home-link-card,
-html[data-user-color-scheme="dark"] .course-note-row {
+html[data-user-color-scheme="dark"] .course-note-row,
+html[data-user-color-scheme="dark"] .links .card-body {
   border-color: rgba(255, 255, 255, 0.1);
   background: rgba(37, 45, 56, 0.82);
 }
 
 html[data-user-color-scheme="dark"] .notes-card__title,
 html[data-user-color-scheme="dark"] .repo-card__title,
-html[data-user-color-scheme="dark"] .course-note-row__title {
+html[data-user-color-scheme="dark"] .course-note-row__title,
+html[data-user-color-scheme="dark"] .links .link-title {
   color: #d7dde5;
+}
+
+html[data-user-color-scheme="dark"] .site-footer-line,
+html[data-user-color-scheme="dark"] .links .link-intro,
+html[data-user-color-scheme="dark"] .links-note {
+  color: #aab6c4;
+}
+
+html[data-user-color-scheme="dark"] .links-note {
+  background: rgba(224, 111, 69, 0.12);
 }
 
 html[data-user-color-scheme="dark"] .archive-total,

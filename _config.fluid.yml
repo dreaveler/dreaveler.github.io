@@ -34,6 +34,7 @@ font:
 custom_js:
   - /js/archive-cards.js
   - /js/daily-materials.js
+  - /js/site-runtime.js
 
 custom_css:
   - /css/custom.css
@@ -49,6 +50,7 @@ navbar:
     - { key: "notes", link: "/notes/", icon: "iconfont icon-books", name: "笔记" }
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill", name: "文章" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill", name: "分类" }
+    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill", name: "友栏" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill", name: "关于" }
     - { key: "github", link: "https://github.com/dreaveler", icon: "iconfont icon-github-fill", name: "GitHub", target: "_blank" }
 
@@ -159,6 +161,39 @@ about:
     - { class: "iconfont icon-mail", link: "mailto:2169448673@qq.com", tip: "Email" }
     - { class: "iconfont icon-wechat-fill", qrcode: "/images/wechat.jpg", tip: "WeChat" }
 
+links:
+  enable: true
+  title: 友栏
+  subtitle: 与同路人保持联结
+  banner_img: /images/dreaveler.png
+  banner_img_height: 58
+  banner_mask_alpha: 0.55
+  items:
+    - {
+      title: "Dreaveler GitHub",
+      intro: "代码、笔记与项目记录",
+      link: "https://github.com/dreaveler",
+      avatar: "/images/favicon-192x192.png"
+    }
+    - {
+      title: "课程笔记",
+      intro: "公开整理的课程笔记入口",
+      link: "/notes/",
+      avatar: "/images/site-logo.png"
+    }
+    - {
+      title: "Fluid",
+      intro: "当前站点使用的 Hexo 主题",
+      link: "https://github.com/fluid-dev/hexo-theme-fluid",
+      avatar: "/images/favicon-192x192.png"
+    }
+  onerror_avatar: /images/favicon-192x192.png
+  custom:
+    enable: true
+    content: '<div class="links-note">友栏还会慢慢补上更多同路人。</div>'
+  comments:
+    enable: false
+
 page:
   banner_img: /images/dreaveler.png
   banner_img_height: 58
@@ -172,6 +207,8 @@ page404:
 
 footer:
   content: '
+    <span class="site-footer-line">建站时间 <time id="site-started-at" datetime="2026-05-20" data-start-date="2026-05-20">2026-05-20</time><span id="site-runtime-days" class="site-runtime-days"></span></span>
+    <span class="footer-sep">·</span>
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
