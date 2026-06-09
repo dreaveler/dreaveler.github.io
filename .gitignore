@@ -1,5 +1,11 @@
 # Ignore the contents of the _site directory and other cache directories
 _site/
+public/
+.deploy_git/
+.hexo/
+db.json
+.playwright-cli/
+output/
 .sass-cache/
 
 # Ignore the directory for local files during development
@@ -10,7 +16,6 @@ Gemfile.lock
 
 # Ignore files created by npm
 node_modules
-package-lock.json
 
 # Ignore the vendor file and bundle for alternative installation
 vendor/

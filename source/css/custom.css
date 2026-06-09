@@ -1,0 +1,141 @@
+
+.banner-text .h2 {
+  font-size: clamp(1.35rem, 2.4vw, 2.35rem);
+  line-height: 1.75;
+}
+
+.index-card {
+  border-radius: 8px;
+}
+
+.notes-intro {
+  margin: 0 0 1.6rem;
+  color: #657786;
+  line-height: 1.8;
+}
+
+.notes-semester {
+  margin: 2rem 0;
+}
+
+.notes-semester h2 {
+  margin-bottom: 1rem;
+}
+
+.notes-grid,
+.repo-grid,
+.home-link-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.notes-card,
+.repo-card,
+.home-link-card,
+.course-note-row {
+  display: block;
+  border: 1px solid rgba(47, 65, 84, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+  text-decoration: none !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.notes-card,
+.repo-card,
+.home-link-card {
+  padding: 1rem;
+}
+
+.notes-card:hover,
+.repo-card:hover,
+.home-link-card:hover,
+.course-note-row:hover {
+  border-color: rgba(33, 127, 134, 0.45);
+  box-shadow: 0 12px 28px rgba(33, 45, 56, 0.12);
+  transform: translateY(-2px);
+}
+
+.notes-card__title,
+.repo-card__title {
+  display: block;
+  color: #26323d;
+  font-weight: 700;
+}
+
+.notes-card__meta,
+.repo-card__meta {
+  display: block;
+  margin-top: 0.35rem;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.note-downloads {
+  margin: 1.6rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #217f86;
+  border-radius: 8px;
+  background: rgba(33, 127, 134, 0.08);
+}
+
+.note-downloads ul {
+  margin: 0.6rem 0 0;
+}
+
+.course-note-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.course-note-row {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+}
+
+.course-note-row__number {
+  color: #e06f45;
+  font-weight: 800;
+}
+
+.course-note-row__title {
+  color: #26323d;
+  font-weight: 700;
+}
+
+.course-note-row__date {
+  color: #718096;
+  font-size: 0.88rem;
+}
+
+html[data-user-color-scheme="dark"] .notes-card,
+html[data-user-color-scheme="dark"] .repo-card,
+html[data-user-color-scheme="dark"] .home-link-card,
+html[data-user-color-scheme="dark"] .course-note-row {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(37, 45, 56, 0.82);
+}
+
+html[data-user-color-scheme="dark"] .notes-card__title,
+html[data-user-color-scheme="dark"] .repo-card__title,
+html[data-user-color-scheme="dark"] .course-note-row__title {
+  color: #d7dde5;
+}
+
+@media (max-width: 640px) {
+  .banner-text .h2 {
+    font-size: 1.1rem;
+  }
+
+  .course-note-row {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+  }
+
+  .course-note-row__date {
+    grid-column: 2;
+  }
+}
