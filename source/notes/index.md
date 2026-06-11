@@ -43,7 +43,7 @@ permalink: /notes/
   <div class="notes-grid">
 <a class="notes-card" href="/notes/算法设计与分析/" style="--notes-card-img:url('/images/banners/nebula.jpg')">
 <span class="notes-card__title">算法设计与分析</span>
-<span class="notes-card__meta">13 篇站内笔记</span>
+<span class="notes-card__meta">15 篇站内笔记</span>
 </a>
 <a class="notes-card" href="/notes/自然语言处理基础/" style="--notes-card-img:url('/images/banners/aurora.jpg')">
 <span class="notes-card__title">自然语言处理基础</span>
