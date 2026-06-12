@@ -67,7 +67,7 @@ banner:
   width_height_ratio: 1.0
 
 index:
-  banner_img: /images/banners/starfield.jpg
+  banner_img: /images/banners/lake-night.jpg
   banner_img_height: 96
   banner_mask_alpha: 0.52
   slogan:
@@ -128,7 +128,7 @@ post:
     enable: false
 
 archive:
-  banner_img: /images/banners/galaxy.jpg
+  banner_img: /images/banners/moon-horizon.jpg
   banner_img_height: 58
   banner_mask_alpha: 0.55
 
@@ -144,7 +144,7 @@ category:
 
 tag:
   enable: true
-  banner_img: /images/banners/clouds.jpg
+  banner_img: /images/banners/mist-forest.jpg
   banner_img_height: 58
   banner_mask_alpha: 0.55
 

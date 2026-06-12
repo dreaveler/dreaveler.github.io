@@ -4,8 +4,129 @@
   line-height: 1.75;
 }
 
+.banner-text {
+  max-width: min(58rem, calc(100vw - 2rem));
+}
+
+.banner-text .h2,
+.banner-text #subtitle {
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.banner-text #subtitle {
+  display: block;
+  max-width: 100%;
+  word-break: break-word;
+}
+
 .index-card {
+  --index-card-img: url("/images/banners/lake-night.jpg");
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 12rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  box-shadow: 0 14px 32px rgba(33, 45, 56, 0.16);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.index-card:nth-of-type(4n + 2) {
+  --index-card-img: url("/images/banners/moon-horizon.jpg");
+}
+
+.index-card:nth-of-type(4n + 3) {
+  --index-card-img: url("/images/banners/mist-forest.jpg");
+}
+
+.index-card:nth-of-type(4n + 4) {
+  --index-card-img: url("/images/banners/mist-mountains.jpg");
+}
+
+.index-card::before,
+.index-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+}
+
+.index-card::before {
+  z-index: -2;
+  background: var(--index-card-img) center / cover no-repeat;
+  transform: scale(1.04);
+  transition: transform 0.22s ease;
+}
+
+.index-card::after {
+  z-index: -1;
+  background:
+    linear-gradient(110deg, rgba(20, 28, 38, 0.9), rgba(20, 28, 38, 0.58) 58%, rgba(20, 28, 38, 0.24)),
+    radial-gradient(circle at top right, rgba(224, 111, 69, 0.26), transparent 38%);
+}
+
+.index-card:hover {
+  border-color: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 20px 42px rgba(33, 45, 56, 0.22);
+  transform: translateY(-3px);
+}
+
+.index-card:hover::before {
+  transform: scale(1.09);
+}
+
+.index-card .index-info {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.index-card .index-header {
+  display: -webkit-box;
+  margin-bottom: 0.45rem;
+  overflow: hidden;
+  color: #fff;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.index-card .index-header a,
+.index-card .index-excerpt,
+.index-card .index-btm,
+.index-card .index-btm a {
+  color: rgba(255, 255, 255, 0.86) !important;
+}
+
+.index-card .index-header a {
+  color: #fff !important;
+}
+
+.index-card .index-excerpt {
+  height: auto;
+  max-height: calc(1.55rem * 3);
+  margin: 0.55rem 0 0.8rem;
+}
+
+.index-card .index-excerpt > div {
+  line-height: 1.55rem;
+}
+
+.index-card .post-metas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.8rem;
+}
+
+.index-card .category-chain span {
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .notes-intro {
@@ -479,8 +600,15 @@ html[data-user-color-scheme="dark"] .daily-material-note {
 }
 
 @media (max-width: 640px) {
+  .banner-text {
+    width: min(20rem, calc(100vw - 2rem));
+    max-width: min(20rem, calc(100vw - 2rem));
+  }
+
+  .banner-text #subtitle,
   .banner-text .h2 {
-    font-size: 1.1rem;
+    font-size: 0.98rem !important;
+    line-height: 1.65;
   }
 
   .course-note-row {

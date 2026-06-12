@@ -5,17 +5,18 @@ const BANNERS = "/images/banners/";
 // 每门课对应一张风景/星空背景图（与 banner、笔记卡片共用一套视觉）
 const coverByCourse = {
   "算法设计与分析": "nebula.jpg",
-  "可信机器学习": "galaxy.jpg",
-  "AI中的编程": "starfield.jpg",
+  "可信机器学习": "mist-forest.jpg",
+  "AI中的编程": "moon-horizon.jpg",
   "自然语言处理基础": "aurora.jpg",
-  "中级微观经济学": "mountains.jpg",
+  "中级微观经济学": "mist-mountains.jpg",
   "角色动画与运动仿真": "clouds.jpg",
   "软件设计实践": "ocean.jpg",
   "数据结构与算法A": "desert.jpg",
-  "计算机视觉": "starfield.jpg"
+  "计算机视觉": "lake-night.jpg"
 };
 
 const fallbackCovers = [
+  "lake-night.jpg", "moon-horizon.jpg", "mist-forest.jpg", "mist-mountains.jpg",
   "nebula.jpg", "starfield.jpg", "aurora.jpg", "ocean.jpg",
   "mountains.jpg", "clouds.jpg", "desert.jpg", "galaxy.jpg"
 ].map(name => BANNERS + name);

@@ -1,6 +1,6 @@
 ---
 title: AI中的编程
-banner_img: /images/banners/starfield.jpg
+banner_img: /images/banners/moon-horizon.jpg
 layout: page
 permalink: /notes/AI中的编程/
 ---

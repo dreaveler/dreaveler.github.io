@@ -23,7 +23,7 @@ permalink: /notes/
 <span class="notes-card__title">数据结构与算法A</span>
 <span class="notes-card__meta">2 篇站内笔记</span>
 </a>
-<a class="notes-card" href="/notes/AI中的编程/" style="--notes-card-img:url('/images/banners/starfield.jpg')">
+<a class="notes-card" href="/notes/AI中的编程/" style="--notes-card-img:url('/images/banners/moon-horizon.jpg')">
 <span class="notes-card__title">AI中的编程</span>
 <span class="notes-card__meta">2 篇站内笔记</span>
 </a>
@@ -31,7 +31,7 @@ permalink: /notes/
 <span class="notes-card__title">可视计算与交互概论</span>
 <span class="notes-card__meta">外部整理稿</span>
 </a>
-<a class="notes-card" href="/notes/计算机视觉/" style="--notes-card-img:url('/images/banners/starfield.jpg')">
+<a class="notes-card" href="/notes/计算机视觉/" style="--notes-card-img:url('/images/banners/lake-night.jpg')">
 <span class="notes-card__title">计算机视觉</span>
 <span class="notes-card__meta">2 篇站内笔记</span>
 </a>
@@ -49,11 +49,11 @@ permalink: /notes/
 <span class="notes-card__title">自然语言处理基础</span>
 <span class="notes-card__meta">18 篇站内笔记</span>
 </a>
-<a class="notes-card" href="/notes/中级微观经济学/" style="--notes-card-img:url('/images/banners/mountains.jpg')">
+<a class="notes-card" href="/notes/中级微观经济学/" style="--notes-card-img:url('/images/banners/mist-mountains.jpg')">
 <span class="notes-card__title">中级微观经济学</span>
 <span class="notes-card__meta">6 篇站内笔记</span>
 </a>
-<a class="notes-card" href="/notes/可信机器学习/" style="--notes-card-img:url('/images/banners/galaxy.jpg')">
+<a class="notes-card" href="/notes/可信机器学习/" style="--notes-card-img:url('/images/banners/mist-forest.jpg')">
 <span class="notes-card__title">可信机器学习</span>
 <span class="notes-card__meta">5 篇站内笔记</span>
 </a>

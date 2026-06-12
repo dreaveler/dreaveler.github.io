@@ -1,6 +1,6 @@
 ---
 title: 计算机视觉
-banner_img: /images/banners/starfield.jpg
+banner_img: /images/banners/lake-night.jpg
 layout: page
 permalink: /notes/计算机视觉/
 ---

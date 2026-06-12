@@ -1,6 +1,6 @@
 ---
 title: 可信机器学习
-banner_img: /images/banners/galaxy.jpg
+banner_img: /images/banners/mist-forest.jpg
 layout: page
 permalink: /notes/可信机器学习/
 ---
