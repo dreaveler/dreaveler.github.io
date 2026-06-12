@@ -23,6 +23,7 @@
 .index-card {
   --index-card-img: url("/images/banners/lake-night.jpg");
   position: relative;
+  box-sizing: border-box;
   isolation: isolate;
   overflow: hidden;
   min-height: 12rem;
@@ -601,14 +602,42 @@ html[data-user-color-scheme="dark"] .daily-material-note {
 
 @media (max-width: 640px) {
   .banner-text {
-    width: min(20rem, calc(100vw - 2rem));
-    max-width: min(20rem, calc(100vw - 2rem));
+    width: min(17.5rem, calc(100vw - 3rem));
+    max-width: min(17.5rem, calc(100vw - 3rem));
   }
 
   .banner-text #subtitle,
   .banner-text .h2 {
     font-size: 0.98rem !important;
     line-height: 1.65;
+  }
+
+  .banner-text #subtitle {
+    word-break: break-all;
+  }
+
+  .index-card {
+    width: calc(100% - 2rem);
+    max-width: calc(100% - 2rem);
+    min-height: 13rem;
+    padding: 1rem;
+  }
+
+  .index-card .index-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .index-card .index-header {
+    font-size: 1.08rem;
+    line-height: 1.35;
+    word-break: break-all;
+  }
+
+  .index-card .index-excerpt {
+    font-size: 0.88rem;
   }
 
   .course-note-row {
