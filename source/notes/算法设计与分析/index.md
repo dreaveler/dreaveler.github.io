@@ -5,7 +5,7 @@ layout: page
 permalink: /notes/算法设计与分析/
 ---
 
-这里收录的是我根据课堂内容、课程资料、Notion 课堂笔记与复习材料整理的《算法设计与分析》笔记。当前既有一篇导论笔记，先把“算法、复杂度与可计算性”的课程地图搭起来，也同步了期中复习总结、“分治策略”“动态规划、贪心与回溯”、往年真题练习集、网络流、NP 完全理论与归约构件进阶、近似算法与度量 TSP / 背包近似方案、随机算法中的 Las Vegas / Monte Carlo / 指纹法、Miller-Rabin 素数检验与随机复杂度类、期末总结全景复习，以及 2018 年期末真题逐题精讲，覆盖从常见算法设计范式到复杂性理论、可证明次优解、概率化算法分析、处理难解问题的策略和考前题型自查的主线。
+这里收录的是我根据课堂内容、课程资料、Notion 课堂笔记与复习材料整理的《算法设计与分析》笔记。当前既有一篇导论笔记，先把“算法、复杂度与可计算性”的课程地图搭起来，也同步了期中复习总结、“分治策略”“动态规划、贪心与回溯”、往年真题练习集、网络流、NP 完全理论与归约构件进阶、近似算法与度量 TSP / 背包近似方案、随机算法中的 Las Vegas / Monte Carlo / 指纹法、Miller-Rabin 素数检验与随机复杂度类、期末总结全景复习、2018 年期末真题逐题精讲，以及从 Obsidian 同步的期末“算分”速记版，覆盖从常见算法设计范式到复杂性理论、可证明次优解、概率化算法分析、处理难解问题的策略和考前题型自查的主线。
 
 除了站内分主题条目，我也把完整课程笔记和一份适合考前快速通读的整理版 PDF 放在这里，方便按“课程主线”或“题型模板 + 典型结论”的方式回看：
 
@@ -97,5 +97,10 @@ permalink: /notes/算法设计与分析/
     <span class="course-note-row__number">14</span>
     <span class="course-note-row__title">14 2018 年期末真题精讲</span>
     <span class="course-note-row__date">2026-06-11</span>
+  </a>
+  <a class="course-note-row" href="/notes/算法设计与分析/15 期末复习：算分笔记同步版/">
+    <span class="course-note-row__number">15</span>
+    <span class="course-note-row__title">15 期末复习：算分笔记同步版</span>
+    <span class="course-note-row__date">2026-06-12</span>
   </a>
 </div>
