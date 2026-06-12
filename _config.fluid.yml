@@ -176,7 +176,7 @@ links:
       <section class="links-apply">
         <p class="links-apply__eyebrow">Friend Links</p>
         <h2>欢迎交换友链</h2>
-        <p class="links-apply__lead">如果你也在写博客、整理课程笔记、记录项目或长期学习，欢迎联系我把你的站点加到这里。</p>
+        <p class="links-apply__lead">如果你也在写博客、整理课程笔记、记录项目或长期学习，欢迎直接在下方留言申请加入友链。</p>
         <div class="links-apply__grid">
           <div class="links-apply__panel">
             <h3>请提供这些信息</h3>
@@ -187,7 +187,7 @@ links:
           </div>
           <div class="links-apply__panel">
             <h3>联系我</h3>
-            <p>发邮件或在 GitHub 上联系我都可以；如果我们已经认识，也可以直接微信发给我。</p>
+            <p>最推荐在页面下方留言；也可以发邮件或在 GitHub 上联系我。如果我们已经认识，也可以直接微信发给我。</p>
             <div class="links-apply__actions">
               <a href="mailto:2169448673@qq.com?subject=%E5%8F%8B%E9%93%BE%E7%94%B3%E8%AF%B7">Email</a>
               <a href="https://github.com/dreaveler">GitHub</a>
@@ -197,7 +197,8 @@ links:
         </div>
       </section>
   comments:
-    enable: false
+    enable: true
+    type: utterances
 
 page:
   banner_img: /images/banners/nebula.jpg
@@ -219,4 +220,14 @@ footer:
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
   '
   statistics:
-    enable: false
+    enable: true
+    source: busuanzi
+    pv_format: '<span class="footer-stat-label">总访问量</span> <span class="footer-stat-value">{}</span> 次'
+    uv_format: '<span class="footer-stat-label">总访客数</span> <span class="footer-stat-value">{}</span> 人'
+
+utterances:
+  repo: dreaveler/dreaveler.github.io
+  issue_term: pathname
+  label: friend-links
+  theme: github-light
+  theme_dark: github-dark

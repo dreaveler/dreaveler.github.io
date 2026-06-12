@@ -256,6 +256,32 @@
   color: #aab6c4;
 }
 
+.footer-inner .statistics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem 0.8rem;
+  margin-top: 0.35rem;
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.footer-inner .statistics > span {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footer-stat-label {
+  color: #64748b;
+}
+
+.footer-stat-value {
+  color: #217f86;
+  font-weight: 800;
+}
+
 .links .card {
   padding: 0.45rem;
   border: 0;
@@ -665,6 +691,8 @@ html[data-user-color-scheme="dark"] .links .link-title {
 }
 
 html[data-user-color-scheme="dark"] .site-footer-line,
+html[data-user-color-scheme="dark"] .footer-inner .statistics,
+html[data-user-color-scheme="dark"] .footer-stat-label,
 html[data-user-color-scheme="dark"] .links .link-intro,
 html[data-user-color-scheme="dark"] .links-note {
   color: #aab6c4;
