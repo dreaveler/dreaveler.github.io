@@ -61,6 +61,10 @@ permalink: /notes/
 <span class="notes-card__title">角色动画与运动仿真</span>
 <span class="notes-card__meta">6 篇站内笔记</span>
 </a>
+<a class="notes-card" href="/notes/日本经济/" style="--notes-card-img:url('/images/banners/gallery/landscape-018-file-1-tianzishan-wulingyuan-zhangjiajie-2.jpg')">
+<span class="notes-card__title">日本经济</span>
+<span class="notes-card__meta">18 篇站内笔记</span>
+</a>
   </div>
 </section>
 
