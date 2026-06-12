@@ -8,6 +8,7 @@ categories:
 tags:
   - 算法设计与分析
 permalink: /notes/算法设计与分析/8 近似算法：从 NP 难到可证明的次优解/
+banner_img: /images/banners/gallery/landscape-018-file-1-tianzishan-wulingyuan-zhangjiajie-2.jpg
 category_bar: true
 ---
 

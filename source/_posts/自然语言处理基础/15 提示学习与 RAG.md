@@ -8,6 +8,7 @@ categories:
 tags:
   - 自然语言处理基础
 permalink: /notes/自然语言处理基础/15 提示学习与 RAG/
+banner_img: /images/banners/gallery/landscape-021-file-20201231-fr-ttmaninger-berg-05-jpg.jpg
 category_bar: true
 ---
 

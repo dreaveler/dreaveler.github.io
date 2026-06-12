@@ -8,6 +8,7 @@ categories:
 tags:
   - 自然语言处理基础
 permalink: /notes/自然语言处理基础/9 Seq2Seq 与 Transformer/
+banner_img: /images/banners/gallery/landscape-042-file-21-224-5054-nnp-synevyr-rb-18-jpg.jpg
 category_bar: true
 ---
 

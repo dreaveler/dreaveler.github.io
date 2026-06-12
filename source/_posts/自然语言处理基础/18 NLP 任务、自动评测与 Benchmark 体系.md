@@ -8,6 +8,7 @@ categories:
 tags:
   - 自然语言处理基础
 permalink: /notes/自然语言处理基础/18 NLP 任务、自动评测与 Benchmark 体系/
+banner_img: /images/banners/gallery/landscape-007-file-01-magura-romania-piatra-craiului-mou.jpg
 category_bar: true
 ---
 

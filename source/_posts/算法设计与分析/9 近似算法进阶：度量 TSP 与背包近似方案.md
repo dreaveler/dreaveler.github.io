@@ -8,6 +8,7 @@ categories:
 tags:
   - 算法设计与分析
 permalink: /notes/算法设计与分析/9 近似算法进阶：度量 TSP 与背包近似方案/
+banner_img: /images/banners/gallery/landscape-015-file-01-gorges-du-tarn-roc-des-hourtous-jp.jpg
 category_bar: true
 ---
 

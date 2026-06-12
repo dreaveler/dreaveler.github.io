@@ -8,6 +8,7 @@ categories:
 tags:
   - 自然语言处理基础
 permalink: /notes/自然语言处理基础/6 HMM与序列标注/
+banner_img: /images/banners/gallery/landscape-045-file-ansberg-blickrichtung-s-den-120324-jp.jpg
 category_bar: true
 ---
 

@@ -8,6 +8,7 @@ categories:
 tags:
   - 角色动画与运动仿真
 permalink: /notes/角色动画与运动仿真/3 Learning to Walk：动态平衡与简化模型/
+banner_img: /images/banners/gallery/landscape-027-file-2011-08-01-10-31-42-switzerland-segl-.jpg
 category_bar: true
 math: true
 ---

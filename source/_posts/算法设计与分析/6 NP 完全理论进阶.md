@@ -8,6 +8,7 @@ categories:
 tags:
   - 算法设计与分析
 permalink: /notes/算法设计与分析/6 NP 完全理论进阶/
+banner_img: /images/banners/gallery/landscape-023-file-20210619-sylvensteinspeicher-02-jpg.jpg
 category_bar: true
 ---
 

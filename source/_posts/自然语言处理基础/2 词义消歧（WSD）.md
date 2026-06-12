@@ -8,6 +8,7 @@ categories:
 tags:
   - 自然语言处理基础
 permalink: /notes/自然语言处理基础/2 词义消歧（WSD）/
+banner_img: /images/banners/gallery/landscape-049-file-2013-04-01-15-02-43-bois-jpg.jpg
 category_bar: true
 ---
 

@@ -8,6 +8,7 @@ categories:
 tags:
   - 自然语言处理基础
 permalink: /notes/自然语言处理基础/14 GPT 缩放与上下文学习/
+banner_img: /images/banners/gallery/nasa-020-gsfc-20171208-archive-e000207.jpg
 category_bar: true
 ---
 

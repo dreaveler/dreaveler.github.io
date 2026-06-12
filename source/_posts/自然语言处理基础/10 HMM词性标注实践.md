@@ -8,6 +8,7 @@ categories:
 tags:
   - 自然语言处理基础
 permalink: /notes/自然语言处理基础/10 HMM词性标注实践/
+banner_img: /images/banners/gallery/nasa-032-gsfc-20171208-archive-e002174.jpg
 category_bar: true
 ---
 

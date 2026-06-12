@@ -8,6 +8,7 @@ categories:
 tags:
   - AI中的编程
 permalink: /notes/AI中的编程/2 Parallel Programmig/
+banner_img: /images/banners/gallery/landscape-054-file-a-foggy-winter-morning-jpg.jpg
 category_bar: true
 ---
 

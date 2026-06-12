@@ -165,32 +165,37 @@ links:
   enable: true
   title: 友栏
   subtitle: 与同路人保持联结
-  banner_img: /images/banners/ocean.jpg
+  banner_img: /images/banners/gallery/landscape-098-file-blue-stormy-clouds-at-sunset-with-wat.jpg
   banner_img_height: 58
   banner_mask_alpha: 0.55
-  items:
-    - {
-      title: "Dreaveler GitHub",
-      intro: "代码、笔记与项目记录",
-      link: "https://github.com/dreaveler",
-      avatar: "/images/favicon-192x192.png"
-    }
-    - {
-      title: "课程笔记",
-      intro: "公开整理的课程笔记入口",
-      link: "/notes/",
-      avatar: "/images/site-logo.png"
-    }
-    - {
-      title: "Fluid",
-      intro: "当前站点使用的 Hexo 主题",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/images/favicon-192x192.png"
-    }
+  items: []
   onerror_avatar: /images/favicon-192x192.png
   custom:
     enable: true
-    content: '<div class="links-note">友栏还会慢慢补上更多同路人。</div>'
+    content: |
+      <section class="links-apply">
+        <p class="links-apply__eyebrow">Friend Links</p>
+        <h2>欢迎交换友链</h2>
+        <p class="links-apply__lead">如果你也在写博客、整理课程笔记、记录项目或长期学习，欢迎联系我把你的站点加到这里。</p>
+        <div class="links-apply__grid">
+          <div class="links-apply__panel">
+            <h3>请提供这些信息</h3>
+            <pre><code>title: "你的站点名"
+      intro: "一句话介绍你的站点"
+      link: "https://example.com/"
+      avatar: "https://example.com/avatar.jpg"</code></pre>
+          </div>
+          <div class="links-apply__panel">
+            <h3>联系我</h3>
+            <p>发邮件或在 GitHub 上联系我都可以；如果我们已经认识，也可以直接微信发给我。</p>
+            <div class="links-apply__actions">
+              <a href="mailto:2169448673@qq.com?subject=%E5%8F%8B%E9%93%BE%E7%94%B3%E8%AF%B7">Email</a>
+              <a href="https://github.com/dreaveler">GitHub</a>
+              <a href="/images/wechat.jpg">WeChat QR</a>
+            </div>
+          </div>
+        </div>
+      </section>
   comments:
     enable: false
 

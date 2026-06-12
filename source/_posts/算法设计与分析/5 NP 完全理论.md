@@ -8,6 +8,7 @@ categories:
 tags:
   - 算法设计与分析
 permalink: /notes/算法设计与分析/5 NP 完全理论/
+banner_img: /images/banners/gallery/nasa-024-pia07906.jpg
 category_bar: true
 ---
 

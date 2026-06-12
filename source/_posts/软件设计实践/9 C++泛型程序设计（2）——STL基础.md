@@ -8,6 +8,7 @@ categories:
 tags:
   - 软件设计实践
 permalink: /notes/软件设计实践/9 C++泛型程序设计（2）——STL基础/
+banner_img: /images/banners/gallery/nasa-068-0302062.jpg
 category_bar: true
 ---
 

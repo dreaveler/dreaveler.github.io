@@ -8,6 +8,7 @@ categories:
 tags:
   - 算法设计与分析
 permalink: /notes/算法设计与分析/10 随机算法：Las Vegas、Monte Carlo 与指纹法/
+banner_img: /images/banners/gallery/landscape-006-file-2014-track-on-fremington-edge-jpg.jpg
 category_bar: true
 ---
 

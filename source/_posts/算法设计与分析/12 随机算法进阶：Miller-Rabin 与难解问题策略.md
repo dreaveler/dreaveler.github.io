@@ -8,6 +8,7 @@ categories:
 tags:
   - 算法设计与分析
 permalink: /notes/算法设计与分析/12 随机算法进阶：Miller-Rabin 与难解问题策略/
+banner_img: /images/banners/gallery/nasa-004-pia20064.jpg
 category_bar: true
 math: true
 ---

@@ -8,6 +8,7 @@ categories:
 tags:
   - 软件设计实践
 permalink: /notes/软件设计实践/8 C++泛型程序设计(1) ——模板与STL初步/
+banner_img: /images/banners/gallery/landscape-069-file-beech-forest-au-great-otway-national-.jpg
 category_bar: true
 ---
 

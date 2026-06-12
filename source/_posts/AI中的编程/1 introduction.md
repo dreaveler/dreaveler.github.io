@@ -8,6 +8,7 @@ categories:
 tags:
   - AI中的编程
 permalink: /notes/AI中的编程/1 introduction/
+banner_img: /images/banners/gallery/nasa-056-pia15658.jpg
 category_bar: true
 ---
 

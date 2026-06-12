@@ -8,6 +8,7 @@ categories:
 tags:
   - 软件设计实践
 permalink: /notes/软件设计实践/10 C++泛型程序设计（3）——STL进阶/
+banner_img: /images/banners/gallery/landscape-058-file-bergtocht-van-vens-naar-bettex-in-val.jpg
 category_bar: true
 ---
 

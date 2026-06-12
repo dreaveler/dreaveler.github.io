@@ -8,6 +8,7 @@ categories:
 tags:
   - 计算机视觉
 permalink: /notes/计算机视觉/1 Introduction/
+banner_img: /images/banners/gallery/landscape-055-file-baum-in-k-rnten-037-jpg.jpg
 category_bar: true
 ---
 

@@ -8,6 +8,7 @@ categories:
 tags:
   - 角色动画与运动仿真
 permalink: /notes/角色动画与运动仿真/2 角色驱动：关节力矩、PD 控制与平衡/
+banner_img: /images/banners/gallery/landscape-026-file-20220921-fr-ttmaning-01-jpg.jpg
 category_bar: true
 math: true
 ---
