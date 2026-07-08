@@ -168,7 +168,11 @@ links:
   banner_img: /images/banners/gallery/landscape-098-file-blue-stormy-clouds-at-sunset-with-wat.jpg
   banner_img_height: 58
   banner_mask_alpha: 0.55
-  items: []
+  items:
+    - title: "快乐堂堂的个人主页"
+      intro: "拥有丰富睡觉经验的哺乳动物，偶尔也写代码和笔记。"
+      link: "https://kltt-l.github.io/"
+      avatar: "https://kltt-l.github.io/images/tri-shooter.png"
   onerror_avatar: /images/favicon-192x192.png
   custom:
     enable: true
