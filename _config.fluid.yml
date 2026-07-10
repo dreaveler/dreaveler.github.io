@@ -35,9 +35,11 @@ custom_js:
   - /js/archive-cards.js
   - /js/daily-materials.js
   - /js/site-runtime.js
+  - /js/schedule.js
 
 custom_css:
   - /css/custom.css
+  - /css/schedule.css
 
 navbar:
   blog_title: dreaveler
@@ -48,6 +50,7 @@ navbar:
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill", name: "首页" }
     - { key: "notes", link: "/notes/", icon: "iconfont icon-books", name: "笔记" }
+    - { key: "schedule", link: "/schedule/", icon: "iconfont icon-date-fill", name: "课表" }
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill", name: "文章" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill", name: "分类" }
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill", name: "友栏" }

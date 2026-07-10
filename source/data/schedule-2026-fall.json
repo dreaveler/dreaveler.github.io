@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "term": "2026–2027 学年 · 第一学期",
+    "updatedAt": "2026-07-10",
+    "primaryCredits": 22,
+    "note": "双学位课程已计入周课表；其学分未在结果页显示，因此不计入主修选课的 22 学分。"
+  },
+  "courses": [
+    {
+      "id": "multimodal-learning",
+      "name": "多模态学习",
+      "shortName": "多模态学习",
+      "code": "04835010",
+      "group": "primary",
+      "type": "专业必修",
+      "credits": 3,
+      "teacher": "刘洋 · 助理教授",
+      "status": "待抽签",
+      "tone": "#217f86",
+      "meetings": [
+        { "day": 1, "start": 3, "end": 4, "week": "all", "room": "二教107" },
+        { "day": 4, "start": 5, "end": 6, "week": "odd", "room": "二教107" }
+      ],
+      "exam": { "kind": "tbd", "display": "堂考、论文或统一时间考试" }
+    },
+    {
+      "id": "computer-networks",
+      "name": "计算机网络",
+      "shortName": "计算机网络",
+      "code": "04834210",
+      "group": "primary",
+      "type": "限选",
+      "credits": 4,
+      "teacher": "黄群 · 助理教授",
+      "status": "待抽签",
+      "tone": "#4d718d",
+      "meetings": [
+        { "day": 1, "start": 5, "end": 6, "week": "all", "room": "理教302" },
+        { "day": 3, "start": 1, "end": 2, "week": "all", "room": "理教302" }
+      ],
+      "exam": { "kind": "dated", "date": "2026-12-28", "display": "12 月 28 日 · 周一 · 下午" }
+    },
+    {
+      "id": "set-and-graph-theory",
+      "name": "集合论与图论",
+      "shortName": "集合论与图论",
+      "code": "04830070",
+      "group": "primary",
+      "type": "限选",
+      "credits": 3,
+      "teacher": "陈立军 · 副教授",
+      "status": "待抽签",
+      "tone": "#6f6aa0",
+      "meetings": [
+        { "day": 2, "start": 3, "end": 4, "week": "all", "room": "理教302" },
+        { "day": 4, "start": 5, "end": 6, "week": "even", "room": "理教302" }
+      ],
+      "exam": { "kind": "dated", "date": "2026-12-29", "display": "12 月 29 日 · 周二 · 上午" }
+    },
+    {
+      "id": "generative-models",
+      "name": "生成模型基础",
+      "shortName": "生成模型基础",
+      "code": "04835390",
+      "group": "primary",
+      "type": "任选",
+      "credits": 3,
+      "teacher": "贺笛 · 助理教授",
+      "status": "待抽签",
+      "tone": "#b27a45",
+      "meetings": [
+        { "day": 2, "start": 1, "end": 2, "week": "even", "room": "二教105" },
+        { "day": 5, "start": 3, "end": 4, "week": "all", "room": "二教105" }
+      ],
+      "exam": { "kind": "tbd", "display": "堂考、论文或统一时间考试" }
+    },
+    {
+      "id": "taijiquan",
+      "name": "太极拳",
+      "shortName": "太极拳",
+      "code": "04130030",
+      "group": "primary",
+      "type": "全校必修",
+      "credits": 1,
+      "teacher": "彭芳 · 副教授",
+      "status": "待抽签",
+      "note": "男生班 · 一体",
+      "tone": "#5e8967",
+      "meetings": [
+        { "day": 1, "start": 7, "end": 8, "week": "all", "room": "地点待定" }
+      ],
+      "exam": { "kind": "tbd", "display": "堂考、论文或统一时间考试" }
+    },
+    {
+      "id": "machine-learning",
+      "name": "机器学习",
+      "shortName": "机器学习",
+      "code": "04833420",
+      "group": "primary",
+      "type": "专业必修",
+      "credits": 3,
+      "teacher": "王立威 · 教授",
+      "status": "待抽签",
+      "tone": "#c56272",
+      "meetings": [
+        { "day": 2, "start": 7, "end": 9, "week": "all", "room": "二教203" }
+      ],
+      "exam": { "kind": "dated", "date": "2027-01-05", "display": "1 月 5 日 · 周二 · 下午" }
+    },
+    {
+      "id": "british-american-culture-in-film",
+      "name": "影视中的英美文化",
+      "shortName": "英美文化",
+      "code": "03835660",
+      "group": "primary",
+      "type": "全校必修",
+      "credits": 2,
+      "teacher": "宋海波 · 讲师",
+      "status": "待抽签",
+      "tone": "#4d867c",
+      "meetings": [
+        { "day": 4, "start": 7, "end": 8, "week": "all", "room": "文史304" }
+      ],
+      "exam": { "kind": "tbd", "display": "堂考、论文或统一时间考试" }
+    },
+    {
+      "id": "mao-zedong-thought",
+      "name": "毛泽东思想和中国特色社会主义理论体系概论",
+      "shortName": "毛概",
+      "code": "04031731",
+      "group": "primary",
+      "type": "全校必修",
+      "credits": 3,
+      "teacher": "贺大兴 · 副教授",
+      "status": "待抽签",
+      "tone": "#a85d52",
+      "meetings": [
+        { "day": 1, "start": 10, "end": 11, "week": "all", "room": "理教102" }
+      ],
+      "exam": { "kind": "dated", "date": "2026-12-31", "display": "12 月 31 日 · 周四 · 晚上" }
+    },
+    {
+      "id": "ai-management",
+      "name": "人工智能管理学",
+      "shortName": "AI 管理学",
+      "code": null,
+      "group": "dual",
+      "type": "双学位选课",
+      "credits": null,
+      "teacher": "信息未显示",
+      "status": "双学位",
+      "tone": "#d27a46",
+      "meetings": [
+        { "day": 2, "start": 10, "end": 12, "week": "all", "room": "二教109" }
+      ],
+      "exam": { "kind": "tbd", "display": "堂考、论文或统一时间考试" }
+    },
+    {
+      "id": "principles-of-economics",
+      "name": "经济学原理",
+      "shortName": "经济学原理",
+      "code": null,
+      "group": "dual",
+      "type": "双学位选课",
+      "credits": null,
+      "teacher": "信息未显示",
+      "status": "双学位",
+      "tone": "#8b6c93",
+      "meetings": [
+        { "day": 4, "start": 10, "end": 11, "week": "all", "room": "二教101" },
+        { "day": 5, "start": 10, "end": 11, "week": "all", "room": "二教101" }
+      ],
+      "exam": { "kind": "dated", "date": "2027-01-07", "display": "1 月 7 日 · 周四 · 晚上" }
+    }
+  ]
+}
