@@ -234,6 +234,44 @@
   font-size: 0.88rem;
 }
 
+.markdown-body span[underline="true"] {
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+.markdown-body span[color="red"] {
+  color: #d9485f;
+}
+
+.markdown-body span[color="orange"] {
+  color: #d97706;
+}
+
+.markdown-body span[color="yellow"] {
+  color: #a16207;
+}
+
+.markdown-body span[color="green"] {
+  color: #27865d;
+}
+
+.markdown-body span[color="blue"] {
+  color: #2563a8;
+}
+
+.markdown-body span[color="purple"] {
+  color: #8052b8;
+}
+
+.markdown-body span[color="pink"] {
+  color: #c24186;
+}
+
+.markdown-body span[color="brown"] {
+  color: #8b5e3c;
+}
+
 .footer-content {
   display: flex;
   flex-wrap: wrap;

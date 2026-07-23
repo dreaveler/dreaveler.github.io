@@ -1,19 +1,23 @@
 ---
-title: 1 introduction
-date: "2025-09-10"
+title: "1 Introduction"
+date: "2025-09-18"
 number: 1
 categories:
   - 课程笔记
   - AI中的编程
 tags:
   - AI中的编程
-permalink: /notes/AI中的编程/1 introduction/
-banner_img: /images/banners/gallery/nasa-056-pia15658.jpg
+  - Notion 同步
+permalink: "/notes/AI中的编程/1 Introduction/"
+banner_img: /images/banners/moon-horizon.jpg
 category_bar: true
+math: true
 ---
 
+> 从本人 Notion 的大二上笔记同步；原始整理状态：完成。
+
 # 基本信息
-分数构成：8*10 + 20 + 5 = 105
+分数构成：8\*10 + 20 + 5 = 105
 大作业额外有5point的bonus
 课程考勤：0次/1次  5point bonus
 课程内容：PyTorch的使用以及深度学习框架背后的原理
@@ -25,20 +29,17 @@ category_bar: true
 - AlphaFold 2
 - ChatGPT
 - Stable Diffusion
-
 ## The Driving Forces of Deep Learning
 ### Large Scale DataSets
 - MNIST
 - ImageNet
 - LAION
-
 ### Computations
 ### Deep Neural Networks
 ## 课程大纲
 - 并行编程 CUDA
 - 自动微分与计算图  python
 - 分布式计算简介
-
 # 第一个Pytroch程序
 ## Data Representation in PyTorch
 the tensor in pytorch is a multidimentional array
@@ -56,7 +57,6 @@ x_ones = torch.ones_like(x_data)
 
 tensor = tensor.to('cuda')
 ```
-
 ## Load Data
 ```python
 import torch
@@ -70,7 +70,6 @@ trainloader = torch.utils.data.DataLoader(trainset , batch_size = batch_size, sh
 dataiter = iter(trainloader)
 images,labels = next(dataiter)
 ```
-
 ## Implement LeNet
 ```python
 class LeNet(torch.nn.Module):
@@ -92,7 +91,6 @@ class LeNet(torch.nn.Module):
         x = self.fc3(x)
         return x
 ```
-
 ## Auto-Differentiation in PyTorch
 ```python
 net = Net()
@@ -107,7 +105,6 @@ loss = criterion(out,target)
 net.zero_grad()
 loss.backard(torch.randn(1,10))
 ```
-
 ## Optimization in Pytorch
 ```python
 lr,weight_decay = 0.001,0.005
@@ -115,5 +112,4 @@ for weights in net.parameters():
     grad = weights.grad + 2 * weights * weight_decay
     weight_data = weights - grad * lr
 ```
-
 ## Distributed Computation
